@@ -97,17 +97,15 @@ The investigation is organised around four analytical objectives, each surfaced 
 ::: {.member}
 <div class="avatar">BT</div>
 ### BUI Tien Thanh
-<div class="role">Task 2 · Project Schedule</div>
 :::
 ::: {.member}
 <div class="avatar">HY</div>
 ### HU Yue
-<div class="role">Task 3 · Prototype Design</div>
 :::
 ::: {.member}
 <div class="avatar">WJ</div>
 ### WU Jiayan
-<div class="role">Data Exploration · Task 1 · Methodology</div>
+<div class="role"><a href="https://isss-608-vaa-iota.vercel.app/" target="_blank">Personal Site ↗</a></div>
 :::
 :::
 
