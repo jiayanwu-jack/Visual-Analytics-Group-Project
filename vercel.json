@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "echo \"Using prebuilt Quarto site in docs/\"",
+  "outputDirectory": "docs",
+  "framework": null
+}
