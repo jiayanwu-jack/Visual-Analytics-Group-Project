@@ -129,6 +129,17 @@
 }
 .member h3{ font-size:1.05rem; margin:.1rem 0 .25rem; }
 .member .role{ font-size:.86rem; color:var(--muted); font-weight:600; }
+.member .role a{ color:var(--blue); }
+
+/* Avatar that doubles as a link */
+a.avatar-link{
+  text-decoration:none !important; color:#fff !important; cursor:pointer;
+  transition:transform .16s ease, box-shadow .16s ease;
+}
+a.avatar-link:hover{
+  transform:translateY(-3px) scale(1.04);
+  box-shadow:0 12px 26px -12px rgba(37,99,235,.85);
+}
 
 /* ---------- Buttons (generic) ---------- */
 .btn-row{ display:flex; flex-wrap:wrap; gap:.7rem; margin:1.2rem 0; }

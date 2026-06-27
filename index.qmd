@@ -103,9 +103,9 @@ The investigation is organised around four analytical objectives, each surfaced 
 ### HU Yue
 :::
 ::: {.member}
-<div class="avatar">WJ</div>
+<a class="avatar avatar-link" href="https://isss-608-vaa-iota.vercel.app/" target="_blank" title="WU Jiayan — personal site">WJ</a>
+
 ### WU Jiayan
-<div class="role"><a href="https://isss-608-vaa-iota.vercel.app/" target="_blank">Personal Site ↗</a></div>
 :::
 :::
 
