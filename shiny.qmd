@@ -1,0 +1,75 @@
+---
+title: "Interactive Shiny Application"
+subtitle: "Investigate the TenantThread breach through four analytical lenses"
+toc: true
+---
+
+The centrepiece of this project is an interactive **R Shiny** dashboard that turns our analysis into an exploratory investigation tool. Filter the data, follow the timeline, trace the communication network, and weigh the evidence for each competing hypothesis.
+
+::: {.btn-row}
+<a class="btn-doc solid" href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank">🚀 Open in a new tab</a>
+<a class="btn-doc" href="https://github.com/" target="_blank">💻 Source: combined_app.R</a>
+:::
+
+## Live application
+
+The app is deployed on **shinyapps.io**. If the frame below is blank, the instance may be spinning up from sleep — give it a few seconds, or open it directly using the button above.
+
+::: {.app-frame}
+<div class="bar"><span class="dot" style="background:#ff5f56"></span><span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span>&nbsp; wujiayan.shinyapps.io/VAST_Challenge_2026</div>
+<iframe src="https://wujiayan.shinyapps.io/VAST_Challenge_2026" loading="lazy" title="VAST Challenge 2026 Shiny Application"></iframe>
+:::
+
+## What's inside
+
+The dashboard is organised into four tabs, mirroring the project's analytical objectives:
+
+::: {.card-grid}
+
+::: {.feature-card}
+<div class="ic blue">🗂️</div>
+### Overview
+<p>Orientation to the case, the dataset, and the two competing hypotheses that frame the investigation.</p>
+:::
+
+::: {.feature-card}
+<div class="ic teal">⏱️</div>
+### Timeline &amp; Leak
+<p>The minute-by-minute breach window (4:00–6:00 PM, 5 June), highlighting the social-media leak and the embargo lift.</p>
+:::
+
+::: {.feature-card}
+<div class="ic amber">🕸️</div>
+### Agent &amp; Communication Flow
+<p>The communication network between the seven AI agents, with centrality metrics to surface key coordinators and bottlenecks.</p>
+:::
+
+::: {.feature-card}
+<div class="ic purple">⚖️</div>
+### Evidence &amp; Judgment
+<p>A competing-hypotheses board that systematically weighs evidence for a deliberate leak versus a system breakdown.</p>
+:::
+
+:::
+
+## Built with
+
+The application is written in R and assembled from the project's three task modules (`task1.R`, `task2.R`, `task3.R`) into a single `combined_app.R`. Key packages include:
+
+- **Interactive dashboard** — `shiny`, `shinydashboard`, `bslib`, `DT`
+- **Network analysis** — `tidygraph`, `igraph`, `ggraph`, `visNetwork`
+- **Text analysis** — `tidytext`, `quanteda`, `wordcloud`
+- **Visualisation** — `ggplot2`, `plotly`, `lubridate`, `tidyverse`
+
+## Run it locally
+
+```r
+# Clone the repository, then from the "Shiny app" folder:
+install.packages(c(
+  "shiny", "shinydashboard", "bslib", "DT", "tidyverse",
+  "tidygraph", "igraph", "ggraph", "visNetwork",
+  "tidytext", "plotly", "lubridate"
+))
+
+shiny::runApp("combined_app.R")
+```

@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Group Members: BUI Tien Thanh, HU Yue, WU Jiayan">
+<meta name="dcterms.date" content="2026-06-27">
+
+<title>Group Project Proposal: VAST Challenge 2026 MC1 – Project HarborCrest</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-f8df6b92e043257bc488bff454f9c3c1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-ef4d1e4b0531542cefd5cc945228ff94.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+
+
+<link rel="stylesheet" href="styles.css">
+<meta property="og:title" content="Group Project Proposal: VAST Challenge 2026 MC1 – Project HarborCrest">
+<meta property="og:description" content="Investigating Information Leak at TenantThread">
+<meta property="og:image" content="https://wujiayan.shinyapps.io/VAST_Challenge_2026/poster/poster_v2.jpg">
+<meta property="og:site_name" content="Project HarborCrest">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Project HarborCrest</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./proposal.html" aria-current="page"> 
+<span class="menu-text">Proposal</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./shiny.html"> 
+<span class="menu-text">Shiny App</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./minutes.html"> 
+<span class="menu-text">Minutes of Meeting</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./poster.html"> 
+<span class="menu-text">Poster</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank"> 
+<span class="menu-text">Launch App</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#project-proposal" id="toc-project-proposal" class="nav-link active" data-scroll-target="#project-proposal"><span class="header-section-number">1</span> Project Proposal</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><span class="header-section-number">2</span> Motivation</a></li>
+  <li><a href="#objectives" id="toc-objectives" class="nav-link" data-scroll-target="#objectives"><span class="header-section-number">3</span> Objectives</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data"><span class="header-section-number">4</span> Data</a>
+  <ul class="collapse">
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description"><span class="header-section-number">4.1</span> Dataset Description</a></li>
+  <li><a href="#key-data-components" id="toc-key-data-components" class="nav-link" data-scroll-target="#key-data-components"><span class="header-section-number">4.2</span> Key Data Components</a></li>
+  <li><a href="#important-variables" id="toc-important-variables" class="nav-link" data-scroll-target="#important-variables"><span class="header-section-number">4.3</span> Important Variables</a></li>
+  </ul></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology"><span class="header-section-number">5</span> Methodology</a></li>
+  <li><a href="#prototype-sketches" id="toc-prototype-sketches" class="nav-link" data-scroll-target="#prototype-sketches"><span class="header-section-number">6</span> Prototype Sketches</a>
+  <ul class="collapse">
+  <li><a href="#shiny-app-design" id="toc-shiny-app-design" class="nav-link" data-scroll-target="#shiny-app-design"><span class="header-section-number">6.1</span> Shiny App Design</a>
+  <ul class="collapse">
+  <li><a href="#tab-1-overview" id="toc-tab-1-overview" class="nav-link" data-scroll-target="#tab-1-overview"><span class="header-section-number">6.1.1</span> Tab 1: Overview</a></li>
+  <li><a href="#tab-2-timeline-slack-leak" id="toc-tab-2-timeline-slack-leak" class="nav-link" data-scroll-target="#tab-2-timeline-slack-leak"><span class="header-section-number">6.1.2</span> Tab 2: Timeline &amp; Slack Leak</a></li>
+  <li><a href="#tab-3-agent-communication-flow" id="toc-tab-3-agent-communication-flow" class="nav-link" data-scroll-target="#tab-3-agent-communication-flow"><span class="header-section-number">6.1.3</span> Tab 3: Agent &amp; Communication Flow</a></li>
+  <li><a href="#tab-4-evidence-judgment" id="toc-tab-4-evidence-judgment" class="nav-link" data-scroll-target="#tab-4-evidence-judgment"><span class="header-section-number">6.1.4</span> Tab 4: Evidence &amp; Judgment</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#r-packages" id="toc-r-packages" class="nav-link" data-scroll-target="#r-packages"><span class="header-section-number">7</span> R Packages</a>
+  <ul class="collapse">
+  <li><a href="#data-processing" id="toc-data-processing" class="nav-link" data-scroll-target="#data-processing"><span class="header-section-number">7.1</span> Data Processing</a></li>
+  <li><a href="#network-analysis" id="toc-network-analysis" class="nav-link" data-scroll-target="#network-analysis"><span class="header-section-number">7.2</span> Network Analysis</a></li>
+  <li><a href="#text-analysis" id="toc-text-analysis" class="nav-link" data-scroll-target="#text-analysis"><span class="header-section-number">7.3</span> Text Analysis</a></li>
+  <li><a href="#visualization" id="toc-visualization" class="nav-link" data-scroll-target="#visualization"><span class="header-section-number">7.4</span> Visualization</a></li>
+  <li><a href="#interactive-dashboard" id="toc-interactive-dashboard" class="nav-link" data-scroll-target="#interactive-dashboard"><span class="header-section-number">7.5</span> Interactive Dashboard</a></li>
+  </ul></li>
+  <li><a href="#project-schedule" id="toc-project-schedule" class="nav-link" data-scroll-target="#project-schedule"><span class="header-section-number">8</span> Project Schedule</a>
+  <ul class="collapse">
+  <li><a href="#key-milestones" id="toc-key-milestones" class="nav-link" data-scroll-target="#key-milestones"><span class="header-section-number">8.1</span> Key Milestones</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">9</span> References</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Group Project Proposal: VAST Challenge 2026 MC1</h1>
+<p class="subtitle lead">Investigating Information Leak at TenantThread</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Group Members: BUI Tien Thanh, HU Yue, WU Jiayan </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">June 27, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="project-proposal" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Project Proposal</h1>
+<p>On June 5th, 2046, confidential merger information between TenantThread and CivicLoom Realty Partners (codenamed “Project HarborCrest”) was leaked on social media at 5:00 PM—exactly one hour before the official 6:00 PM embargo lift. This premature disclosure triggered an investigation into whether the leak was deliberate sabotage or an organizational failure under extreme pressure.</p>
+<p>TenantThread operated with 7 AI agents managing communications, compliance, and social media during the critical two-week period leading to the announcement. The breach raises fundamental questions about AI-driven organizational systems: when they fail, is it by design or by overload?</p>
+<p><strong>Central Investigative Question:</strong> Did TenantThread’s team deliberately leak the merger information, or did the compliance system simply break down under pressure?</p>
+<p>This project will use visual analytics, network analysis, and text mining to examine 912 internal communications across 14 days to distinguish between these competing explanations.</p>
+</section>
+<section id="motivation" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Motivation</h1>
+<p>This project addresses several critical analytical and practical challenges:</p>
+<ol type="1">
+<li><p><strong>AI System Accountability</strong>: As organizations increasingly rely on AI agents for critical functions, understanding how these systems fail under pressure has direct implications for governance, risk management, and regulatory compliance.</p></li>
+<li><p><strong>Visual Analytics for Investigation</strong>: This project demonstrates how network analysis, text mining, and interactive visualization can support complex investigative work—skills applicable to fraud detection, security incidents, and organizational audits.</p></li>
+<li><p><strong>Competing Hypotheses Framework</strong>: By systematically evaluating evidence that supports or refutes each explanation, we apply rigorous analytical reasoning rather than confirmation bias—a critical skill for data-driven decision making.</p></li>
+<li><p><strong>Real-world Data Complexity</strong>: Working with multi-layered data (communications, internal states, environmental context) mirrors actual organizational investigations and builds skills in handling nested, unstructured data.</p></li>
+<li><p><strong>Practical Impact</strong>: The distinction between deliberate misconduct and system failure determines whether the response should be disciplinary action or process improvement—a decision with significant organizational and legal consequences.</p></li>
+</ol>
+</section>
+<section id="objectives" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Objectives</h1>
+<p>The main objectives of this project are:</p>
+<ol type="1">
+<li><p><strong>Reconstruct the event sequence</strong> during the breach window (4:00-6:00 PM, June 5) using network analysis and timeline visualization to identify who communicated what, when, and through which channels.</p></li>
+<li><p><strong>Analyze behavioral patterns</strong> by comparing breach-day behavior against baseline patterns using statistical tests, text analysis, and network metrics to detect anomalies consistent with either deliberate action or system strain.</p></li>
+<li><p><strong>Identify key actors and information flow</strong> through centrality analysis (betweenness, degree, closeness) to determine which agents were critical coordinators or bottlenecks.</p></li>
+<li><p><strong>Apply competing hypotheses framework</strong> to systematically evaluate evidence supporting deliberate leak vs.&nbsp;system breakdown explanations.</p></li>
+<li><p><strong>Develop an interactive Shiny dashboard</strong> that enables exploratory investigation of the data through multiple analytical lenses (network, timeline, text, agent behavior).</p></li>
+</ol>
+</section>
+<section id="data" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data</h1>
+<section id="dataset-description" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="dataset-description"><span class="header-section-number">4.1</span> Dataset Description</h2>
+<ul>
+<li><strong>Source:</strong> VAST Challenge 2026 Mini-Challenge 1 (MC1)</li>
+<li><strong>File:</strong> <code>MC1_final.json</code></li>
+<li><strong>Format:</strong> Nested JSON structure</li>
+<li><strong>Size:</strong> 912 communications across 23 time-stamped rounds</li>
+<li><strong>Agents:</strong> 7 AI agents (Legal, PR, Social Media, Quality, Judge, PR Intern, Intern)</li>
+<li><strong>Time Period:</strong> May 23, 2046 - June 5, 2046 (14 days)</li>
+<li><strong>Critical Window:</strong> June 5, 2046, 4:00 PM - 6:00 PM</li>
+</ul>
+</section>
+<section id="key-data-components" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="key-data-components"><span class="header-section-number">4.2</span> Key Data Components</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 49%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Description</th>
+<th>Records</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>communications</code></td>
+<td>Agent messages with metadata</td>
+<td>912 messages</td>
+</tr>
+<tr class="even">
+<td><code>environment_context</code></td>
+<td>External events and media pressure</td>
+<td>23 rounds</td>
+</tr>
+<tr class="odd">
+<td><code>internal_state</code></td>
+<td>Agent private reasoning (sparse)</td>
+<td>86 records</td>
+</tr>
+<tr class="even">
+<td><code>rounds</code></td>
+<td>Time-stamped system snapshots</td>
+<td>23 rounds</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="important-variables" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="important-variables"><span class="header-section-number">4.3</span> Important Variables</h2>
+<p><strong>Network Construction:</strong> - <code>agent_id</code>: Agent identifier for nodes - <code>responding_to</code>: Reply reference for building edges - <code>channel</code>: Communication channel (comms_huddle, one_on_one_chat, side_huddle, etc.)</p>
+<p><strong>Text Analysis:</strong> - <code>message_text</code>: Full message content - <code>internal_state</code>: Private agent reasoning (reacting, rationalizing, deliberating)</p>
+<p><strong>Temporal Analysis:</strong> - <code>timestamp</code>: Message datetime - <code>round_hour</code>: Round time marker</p>
+<p><strong>Context:</strong> - <code>environment_context</code>: External events, media pressure, critical deadlines - <code>message_type</code>: Type of communication</p>
+</section>
+</section>
+<section id="methodology" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Methodology</h1>
+<p>The analysis follows a six-stage pipeline — from raw JSON ingestion through interactive Shiny delivery — structured around the three VAST Challenge tasks. Each task builds on the preceding one, culminating in an evidence-based verdict on whether the embargo breach was a system failure, a deliberate early announcement, or a combination of both.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Diagram</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Approach</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div id="fig-methodology" class="cell-output-display quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-methodology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap");
+#mg-wrap{font-family:"DM Sans",system-ui,sans-serif;background:#f8fafc;padding:28px 24px 24px;border-radius:12px;border:1px solid #e2e8f0;}
+.mg-title{text-align:center;font-size:15px;font-weight:700;color:#1e293b;letter-spacing:.02em;margin-bottom:22px;}
+.mg-flow{display:flex;flex-direction:column;gap:0;align-items:center;width:100%;}
+/* INPUT */
+.mg-input{background:#1e293b;color:#f1f5f9;border-radius:8px;padding:10px 22px;font-size:12.5px;font-weight:600;text-align:center;width:260px;font-family:"DM Mono",monospace;letter-spacing:.04em;}
+/* CONNECTOR */
+.mg-arrow{display:flex;flex-direction:column;align-items:center;gap:0;margin:0;}
+.mg-arrow-line{width:2px;height:16px;background:#94a3b8;}
+.mg-arrow-head{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:7px solid #94a3b8;}
+/* STAGES */
+.mg-stages{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%;margin:0;}
+.mg-stage{border-radius:10px;overflow:hidden;border:1.5px solid;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.mg-stage-hdr{padding:9px 14px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.mg-stage-num{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;background:rgba(255,255,255,0.35);flex-shrink:0;}
+.mg-stage-body{padding:10px 14px;display:flex;flex-direction:column;gap:5px;}
+.mg-item{font-size:11px;color:#334155;line-height:1.45;padding:5px 8px;border-radius:5px;background:rgba(255,255,255,0.7);border-left:3px solid;}
+.mg-item-label{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#64748b;margin-top:2px;}
+/* SHINY STRIP */
+.mg-shiny{width:100%;margin:0;}
+.mg-shiny-hdr{background:#7c3aed;border-radius:10px 10px 0 0;padding:10px 18px;font-size:11.5px;font-weight:700;color:#fff;letter-spacing:.04em;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.mg-tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;background:#f1f5f9;border:1.5px solid #7c3aed;border-top:none;border-radius:0 0 10px 10px;padding:10px 14px;}
+.mg-tab{background:#fff;border:1px solid #ddd6fe;border-radius:6px;padding:7px 8px;text-align:center;font-size:10px;color:#4c1d95;font-weight:600;line-height:1.3;}
+/* VERDICT */
+.mg-verdict{background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);border-radius:10px;padding:14px 22px;width:100%;text-align:center;color:#f1f5f9;}
+.mg-verdict-label{font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#94a3b8;margin-bottom:5px;}
+.mg-verdict-text{font-size:13px;font-weight:600;line-height:1.5;color:#e2e8f0;}
+.mg-verdict-sub{font-size:11px;color:#64748b;margin-top:4px;}
+</style>
+
+<div id="mg-wrap">
+  <div class="mg-title">Analytical Pipeline — VAST Challenge 2026 MC1</div>
+  <div class="mg-flow">
+
+    <!-- INPUT -->
+    <div class="mg-input">MC1_final_00.json &nbsp;●&nbsp; 912 messages &nbsp;●&nbsp; 23 rounds</div>
+
+    <div class="mg-arrow"><div class="mg-arrow-line"></div><div class="mg-arrow-head"></div></div>
+
+    <!-- STAGE 0: DATA PREP -->
+    <div style="width:100%;margin-bottom:10px;">
+      <div class="mg-stage" style="border-color:#2563eb;width:100%;box-sizing:border-box;">
+        <div class="mg-stage-hdr" style="background:#2563eb;color:#fff;">
+          <div class="mg-stage-num">0</div> Data Preparation
+        </div>
+        <div class="mg-stage-body" style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+          <div class="mg-item" style="border-color:#2563eb;">Rounds &amp; environment table<div class="mg-item-label">23 rounds · stock price · headlines</div></div>
+          <div class="mg-item" style="border-color:#2563eb;">Communications table<div class="mg-item-label">912 messages · channel · agent_id</div></div>
+          <div class="mg-item" style="border-color:#2563eb;">Internal-state table<div class="mg-item-label">deliberating · reacting · rationalizing</div></div>
+          <div class="mg-item" style="border-color:#2563eb;">Period classification<div class="mg-item-label">Normal · Escalation · Crisis</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mg-arrow"><div class="mg-arrow-line"></div><div class="mg-arrow-head"></div></div>
+
+    <!-- THREE TASKS -->
+    <div class="mg-stages" style="margin-bottom:10px;">
+
+      <!-- TASK 1 -->
+      <div class="mg-stage" style="border-color:#0d9488;">
+        <div class="mg-stage-hdr" style="background:#0d9488;color:#fff;">
+          <div class="mg-stage-num">1</div> Task 1: Events &amp; Causal Chain
+        </div>
+        <div class="mg-stage-body">
+          <div class="mg-item" style="border-color:#0d9488;">28-node causal graph<div class="mg-item-label">Cytoscape.js · preset layout · 37 edges · hover tooltips</div></div>
+          <div class="mg-item" style="border-color:#0d9488;">Communication networks<div class="mg-item-label">Pre-crisis vs crisis-day · oval nodes · edge weight by volume</div></div>
+          <div class="mg-item" style="border-color:#0d9488;">Evidence timeline — 45 items<div class="mg-item-label">System Failure / Deliberate / Both · chronological dot chart</div></div>
+        </div>
+      </div>
+
+      <!-- TASK 2 -->
+      <div class="mg-stage" style="border-color:#d97706;">
+        <div class="mg-stage-hdr" style="background:#d97706;color:#fff;">
+          <div class="mg-stage-num">2</div> Task 2: Typical vs. Evasive Behaviour
+        </div>
+        <div class="mg-stage-body">
+          <div class="mg-item" style="border-color:#d97706;">Channel usage &amp; monitoring scope<div class="mg-item-label">Judge-Agent visibility · private vs monitored · 19× side_huddle rise</div></div>
+          <div class="mg-item" style="border-color:#d97706;">Behavioural escalation metrics<div class="mg-item-label">4 measures · Normal/Escalation/Crisis · animated dot chart</div></div>
+          <div class="mg-item" style="border-color:#d97706;">Internal state analysis — 6 phases<div class="mg-item-label">deliberating / reacting / rationalizing · temporal inversion at 4PM→5PM</div></div>
+        </div>
+      </div>
+
+      <!-- TASK 3 -->
+      <div class="mg-stage" style="border-color:#9333ea;">
+        <div class="mg-stage-hdr" style="background:#9333ea;color:#fff;">
+          <div class="mg-stage-num">3</div> Task 3: Leading Indicators &amp; Control Gaps
+        </div>
+        <div class="mg-stage-body">
+          <div class="mg-item" style="border-color:#9333ea;">Private channel sensitivity score<div class="mg-item-label">Embargo-vocabulary proportion per round · divergence from monitored</div></div>
+          <div class="mg-item" style="border-color:#9333ea;">Near-miss classification — 11 events<div class="mg-item-label">4 root causes: scope · enforcement · escalation · timing</div></div>
+          <div class="mg-item" style="border-color:#9333ea;">Why no action — root cause chart<div class="mg-item-label">Structural gap analysis · prior anomaly count per gap</div></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mg-arrow"><div class="mg-arrow-line"></div><div class="mg-arrow-head"></div></div>
+
+    <!-- SHINY APP -->
+    <div class="mg-shiny" style="margin-bottom:10px;">
+      <div class="mg-shiny-hdr">
+        <div class="mg-stage-num" style="background:rgba(255,255,255,0.25);">4</div>
+        Integrated Shiny Application — 6-Tab Interactive Dashboard
+      </div>
+      <div class="mg-tabs">
+        <div class="mg-tab">Causal Chain &amp;<br>Evidence Timeline</div>
+        <div class="mg-tab">Communication<br>Networks</div>
+        <div class="mg-tab">Channel Behaviour<br>&amp; Sensitivity</div>
+        <div class="mg-tab">Internal State<br>Analysis</div>
+        <div class="mg-tab">Near Misses<br>&amp; Control Gaps</div>
+        <div class="mg-tab">Competing<br>Hypotheses</div>
+      </div>
+    </div>
+
+    <div class="mg-arrow"><div class="mg-arrow-line"></div><div class="mg-arrow-head"></div></div>
+
+    <!-- VERDICT -->
+    <div class="mg-verdict">
+      <div class="mg-verdict-label">Analytical Outcome</div>
+      <div class="mg-verdict-text">System breakdown enabled deliberate early announcement</div>
+      <div class="mg-verdict-sub">The compliance architecture failed first — then senior agents engineered a pre-planned release under Section 4.3(c) with bilateral consent, one hour before the contractual 6 PM lift.</div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-methodology-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Analytical Pipeline
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="stage-0-data-preparation" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="stage-0-data-preparation"><span class="header-section-number">5.0.1</span> Stage 0 — Data Preparation</h3>
+<p>The raw <code>MC1_final_00.json</code> file is parsed with <code>jsonlite::fromJSON()</code> into four normalised tables: a <strong>rounds/environment table</strong> (23 rows, one per hourly round, carrying stock price, external headline, and sentiment rating); a <strong>communications table</strong> (912 rows, one per message, carrying <code>agent_id</code>, <code>channel</code>, <code>responding_to</code>, and message content); an <strong>internal-state table</strong> extracting the three private-reasoning fields (<code>deliberating</code>, <code>reacting</code>, <code>rationalizing</code>) where present; and an <strong>agent metadata table</strong>. A common <code>period</code> classification (Normal: May 17–21; Escalation: May 22–Jun 4; Crisis: Jun 5) is applied across all tables to support period-stratified analysis throughout.</p>
+</section>
+<section id="stage-1-task-1-key-events-relationships-and-causal-chain" class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="stage-1-task-1-key-events-relationships-and-causal-chain"><span class="header-section-number">5.0.2</span> Stage 1 — Task 1: Key Events, Relationships, and Causal Chain</h3>
+<p>Three linked visualisations reconstruct the event sequence:</p>
+<p><strong>Causal chain graph.</strong> A 28-node directed graph (built in R as a <code>tribble</code>, serialised with <code>jsonlite::toJSON</code>, and rendered via Cytoscape.js embedded through <code>htmltools</code>) traces the full sequence from embargo establishment (May 17) through formal lift (Jun 5 6PM). Nodes are positioned manually on a preset layout grouped by phase — pre-crisis (blue), crisis escalation (amber), breach sequence (red), and resolution (green) — to minimise edge crossings between long-range causal links. Hover on any node reveals the event’s datetime, actors, and verbatim dataset quote; hover on any edge reveals the causal relationship with its evidencing quote.</p>
+<p><strong>Communication networks.</strong> Two <code>plotly</code>-based directed networks compare the pre-crisis and crisis-day agent communication graphs. Nodes use flat oval shapes positioned on a spread layout matching the actual network topology; edges are colour-coded by channel (<code>comms_huddle</code> = blue, <code>side_huddle</code> = red, <code>one_on_one_chat</code> = gold), sized by message volume, and offset perpendicularly for parallel edges between the same pair. Midpoint hover markers report the message count per edge.</p>
+<p><strong>Evidence timeline.</strong> All 45 key evidence items are plotted chronologically on three horizontal tracks — System Failure (blue), Both (amber), Deliberate (red) — using <code>ggplot2</code> and <code>ggplotly</code>. A vertical dashed line at Jun 5 4PM marks the Phase 1/Phase 2 boundary. The visual shift from mixed-blue to dense-red after this boundary makes the sequential nature of the breach directly visible.</p>
+</section>
+<section id="stage-2-task-2-typical-vs.-evasive-behaviour" class="level3" data-number="5.0.3">
+<h3 data-number="5.0.3" class="anchored" data-anchor-id="stage-2-task-2-typical-vs.-evasive-behaviour"><span class="header-section-number">5.0.3</span> Stage 2 — Task 2: Typical vs.&nbsp;Evasive Behaviour</h3>
+<p>Four analytical layers characterise how agent behaviour deviated from baseline:</p>
+<p><strong>Channel usage and monitoring scope.</strong> A faceted bar chart shows message volume per channel across the three periods, with channels annotated by Judge-Agent visibility (monitored vs.&nbsp;outside scope). The key finding — side_huddle and one_on_one_chat usage rising 19× in the Escalation period while remaining invisible to the compliance monitor — is made explicit through pink background shading and scope labels on each facet.</p>
+<p><strong>Private channel sensitivity score.</strong> A custom sensitivity metric (proportion of messages in each channel type containing embargo-sensitive vocabulary per round) is plotted as two time-series lines: private channels (solid red) vs.&nbsp;comms_huddle (dashed blue), with a divergence ribbon. Four annotated events (May 23 first spike, May 29 reversal, May 30 structural reset, Jun 5·11AM peak) mark the key moments where the gap between monitored and unmonitored channel content widened.</p>
+<p><strong>Behavioural escalation metrics.</strong> Four measures — side_huddle message average, personal posting rate, anonymous posting rate, and private-channel share — are computed across the three periods and displayed as an animated <code>plot_ly</code> dot chart. All four rise monotonically from Normal through Escalation to Crisis, ruling out reactive stress as the primary driver (a step-change at crisis onset would be expected if behaviour were purely reactive).</p>
+<p><strong>Internal state analysis.</strong> Six phases of private reasoning are identified from the <code>deliberating</code>, <code>reacting</code>, and <code>rationalizing</code> fields and presented as an interactive accordion widget (built with <code>glue</code> + <code>htmltools</code>). Each phase card shows the verbatim field text, the agent, and the field type (colour-coded: deliberating = blue, reacting = amber, rationalizing = purple). The decisive finding — Legal-Agent’s 4PM deliberating field showing the 4:30 PM plan fully formed, followed by the 5PM rationalizing field presenting SaltWind as the cause — constitutes the temporal inversion at the core of the deliberate leakage finding.</p>
+</section>
+<section id="stage-3-task-3-leading-indicators-and-control-gaps" class="level3" data-number="5.0.4">
+<h3 data-number="5.0.4" class="anchored" data-anchor-id="stage-3-task-3-leading-indicators-and-control-gaps"><span class="header-section-number">5.0.4</span> Stage 3 — Task 3: Leading Indicators and Control Gaps</h3>
+<p>Three analyses address why prior warning signals did not result in action:</p>
+<p><strong>Private channel sensitivity timeline.</strong> The sensitivity score chart from Task 2 doubles as a leading indicator analysis: the first meaningful divergence between private and monitored channels appears on May 23, two weeks before the breach. Three subsequent signal points (May 30 comms_huddle drop to zero, Jun 5·11AM private peak at 0.93) constitute a quantifiable advance warning that any real-time monitoring of channel routing would have detected.</p>
+<p><strong>Near-miss event classification.</strong> Eleven prior anomalous events are catalogued and classified by the structural root cause that prevented corrective action: scope limitation (5 events — side_huddle and 1-on-1 invisible to Judge-Agent), enforcement limitation (3 events — COMPLIANCE_WARNINGs advisory only), no escalation protocol (2 events — CivicLoom never alerted), and timing gap (1 event — Judge not yet deployed). A horizontal bar chart shows anomaly count per root cause.</p>
+<p><strong>Root cause detail table.</strong> Each of the 11 events is mapped to its specific root cause and a detailed explanation of why no action was possible, formatted as a colour-coded <code>kable</code> table.</p>
+</section>
+<section id="stage-4-integrated-shiny-application" class="level3" data-number="5.0.5">
+<h3 data-number="5.0.5" class="anchored" data-anchor-id="stage-4-integrated-shiny-application"><span class="header-section-number">5.0.5</span> Stage 4 — Integrated Shiny Application</h3>
+<p>The six analytical outputs are delivered through a <code>shiny</code> + <code>shinydashboard</code> application with six linked tabs:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tab</th>
+<th>Content</th>
+<th>Primary interactivity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Causal Chain</td>
+<td>28-node graph + 45-item evidence timeline</td>
+<td>Click node to highlight subgraph; hover for quotes</td>
+</tr>
+<tr class="even">
+<td>Communication Networks</td>
+<td>Pre-crisis and crisis-day plotly networks</td>
+<td>Hover edges for message count; click to filter</td>
+</tr>
+<tr class="odd">
+<td>Channel Behaviour</td>
+<td>Channel usage + sensitivity timeline</td>
+<td>Period selector; scroll to zoom</td>
+</tr>
+<tr class="even">
+<td>Internal State</td>
+<td>6-phase accordion widget</td>
+<td>Click phase to expand; click card for full quote</td>
+</tr>
+<tr class="odd">
+<td>Near Misses</td>
+<td>Root cause bar chart + detail table</td>
+<td>Hover bar for count; click for event detail</td>
+</tr>
+<tr class="even">
+<td>Competing Hypotheses</td>
+<td>Evidence classification + verdict</td>
+<td>Evidence filtered by label (SF/Both/Deliberate)</td>
+</tr>
+</tbody>
+</table>
+<p>Reactive filtering across tabs is implemented via <code>shiny::reactiveValues</code> — selecting a time period, agent, or channel in any tab propagates through to all others, enabling simultaneous investigation across analytical dimensions.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="prototype-sketches" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Prototype Sketches</h1>
+<section id="shiny-app-design" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="shiny-app-design"><span class="header-section-number">6.1</span> Shiny App Design</h2>
+<p>The proposed Shiny app is designed as an interactive dashboard for investigating whether the TenantThread merger exposure was a deliberate leak or a system-control failure. The prototype contains four main tabs:</p>
+<div class="cell" data-layout-align="center">
+<div id="fig-shiny-prototype" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-shiny-prototype-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="poster/poster_v2.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shiny-prototype-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Low-fidelity Shiny App prototype design.
+</figcaption>
+</figure>
+</div>
+</div>
+<section id="tab-1-overview" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="tab-1-overview"><span class="header-section-number">6.1.1</span> Tab 1: Overview</h3>
+<ul>
+<li>Provides a high-level summary of the crisis.</li>
+<li>Shows key indicators such as total messages, merger-related messages, leak/exposure signals, and pre-embargo public exposure.</li>
+<li>Presents the final interpretation: internal confidentiality leak enabled by system-level control failure.</li>
+</ul>
+</section>
+<section id="tab-2-timeline-slack-leak" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="tab-2-timeline-slack-leak"><span class="header-section-number">6.1.2</span> Tab 2: Timeline &amp; Slack Leak</h3>
+<ul>
+<li>Focuses on how the crisis developed over time.</li>
+<li>Displays communication volume, pressure signal heatmap, and the Slack screenshot escalation timeline.</li>
+<li>Highlights the turning point from market inference to direct internal leakage.</li>
+</ul>
+</section>
+<section id="tab-3-agent-communication-flow" class="level3" data-number="6.1.3">
+<h3 data-number="6.1.3" class="anchored" data-anchor-id="tab-3-agent-communication-flow"><span class="header-section-number">6.1.3</span> Tab 3: Agent &amp; Communication Flow</h3>
+<ul>
+<li>Shows which agents were most involved in the communication and pressure patterns.</li>
+<li>Includes agent-level pressure exposure and communication-flow visuals.</li>
+<li>Helps users understand why the system failed to contain sensitive information.</li>
+</ul>
+</section>
+<section id="tab-4-evidence-judgment" class="level3" data-number="6.1.4">
+<h3 data-number="6.1.4" class="anchored" data-anchor-id="tab-4-evidence-judgment"><span class="header-section-number">6.1.4</span> Tab 4: Evidence &amp; Judgment</h3>
+<ul>
+<li>Summarises the final evidence used to classify the incident.</li>
+<li>Displays the evidence interpretation matrix comparing internal leak, system breakdown, and senior-orchestrated leak.</li>
+<li>Provides the final judgment that the incident was an internal leak amplified by weak multi-agent controls, not a proven senior-level deliberate leak.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="r-packages" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> R Packages</h1>
+<section id="data-processing" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="data-processing"><span class="header-section-number">7.1</span> Data Processing</h2>
+<ul>
+<li><code>tidyverse</code>: Data manipulation and transformation</li>
+<li><code>jsonlite</code>: JSON data import and parsing</li>
+<li><code>lubridate</code>: Date and time handling</li>
+<li><code>pacman</code>: Package management</li>
+</ul>
+</section>
+<section id="network-analysis" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="network-analysis"><span class="header-section-number">7.2</span> Network Analysis</h2>
+<ul>
+<li><code>igraph</code>: Network construction and metrics</li>
+<li><code>tidygraph</code>: Tidy graph data structures</li>
+<li><code>ggraph</code>: Network visualization with ggplot2 syntax</li>
+<li><code>visNetwork</code>: Interactive network graphs</li>
+<li><code>widyr</code>: Pairwise operations for network building</li>
+</ul>
+</section>
+<section id="text-analysis" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="text-analysis"><span class="header-section-number">7.3</span> Text Analysis</h2>
+<ul>
+<li><code>tidytext</code>: Text mining and tidy text principles</li>
+<li><code>tm</code>: Text mining framework</li>
+<li><code>wordcloud</code>: Word cloud generation</li>
+</ul>
+</section>
+<section id="visualization" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="visualization"><span class="header-section-number">7.4</span> Visualization</h2>
+<ul>
+<li><code>ggplot2</code>: Static visualizations</li>
+<li><code>plotly</code>: Interactive plots</li>
+<li><code>ggtext</code>: Enhanced text rendering</li>
+<li><code>patchwork</code>: Combining multiple plots</li>
+<li><code>scales</code>: Scale functions</li>
+</ul>
+</section>
+<section id="interactive-dashboard" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="interactive-dashboard"><span class="header-section-number">7.5</span> Interactive Dashboard</h2>
+<ul>
+<li><code>shiny</code>: Web application framework</li>
+<li><code>shinydashboard</code>: Dashboard layout components</li>
+<li><code>DT</code>: Interactive data tables</li>
+<li><code>shinyWidgets</code>: Additional UI widgets</li>
+</ul>
+</section>
+</section>
+<section id="project-schedule" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Project Schedule</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proposal_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Week</th>
+<th>Milestone</th>
+<th>Deliverables</th>
+<th>Tasks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Week 1</strong></td>
+<td>Data Preparation &amp; EDA</td>
+<td>- Data cleaning script<br>- Initial exploratory analysis<br>- Data structure documentation</td>
+<td>- Extract communications from JSON<br>- Build interaction network<br>- Calculate basic statistics<br>- Identify breach window</td>
+</tr>
+<tr class="even">
+<td><strong>Week 2</strong></td>
+<td>Network Analysis</td>
+<td>- Network graphs by period<br>- Centrality metrics<br>- Baseline comparison</td>
+<td>- Create period networks<br>- Calculate centrality measures<br>- Visualize network evolution<br>- Identify key actors</td>
+</tr>
+<tr class="odd">
+<td><strong>Week 3</strong></td>
+<td>Text &amp; Timeline Analysis</td>
+<td>- TF-IDF results<br>- Event sequence visualization<br>- Action keyword analysis</td>
+<td>- Text preprocessing<br>- TF-IDF by period/agent<br>- Timeline reconstruction<br>- Internal states analysis</td>
+</tr>
+<tr class="even">
+<td><strong>Week 4</strong></td>
+<td>Shiny Dashboard Development</td>
+<td>- Interactive dashboard prototype<br>- Core functionality implemented</td>
+<td>- Build tab structure<br>- Implement network viz<br>- Add timeline explorer<br>- Integrate text analysis</td>
+</tr>
+<tr class="odd">
+<td><strong>Week 5</strong></td>
+<td>Refinement &amp; Documentation</td>
+<td>- Final dashboard<br>- Project report<br>- Presentation materials</td>
+<td>- Polish UI/UX<br>- Add competing hypotheses tab<br>- Write analysis narrative<br>- Prepare presentation</td>
+</tr>
+</tbody>
+</table>
+<section id="key-milestones" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="key-milestones"><span class="header-section-number">8.1</span> Key Milestones</h2>
+<ul>
+<li><strong>End of Week 2</strong>: Complete all static analyses (network, text, timeline)</li>
+<li><strong>End of Week 4</strong>: Working Shiny dashboard with all major features</li>
+<li><strong>End of Week 5</strong>: Final deliverables ready for presentation</li>
+</ul>
+</section>
+</section>
+<section id="references" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> References</h1>
+<ul>
+<li>VAST Challenge 2026 MC1: https://vast-challenge.github.io/2026/MC1</li>
+<li>Hands-on Exercise 7: Network Data Visualisation and Analysis</li>
+<li>Take-home Exercise 2: VAST Challenge 2026 MC1 Analysis Framework</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/wujiayan\.shinyapps\.io\/VAST_Challenge_2026");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><strong>VAST Challenge 2026 · Mini-Challenge 1</strong> &nbsp;·&nbsp; ISSS608 Visual Analytics &amp; Applications</p>
+</div>   
+    <div class="nav-footer-center">
+<p>BUI Tien Thanh &nbsp;·&nbsp; HU Yue &nbsp;·&nbsp; WU Jiayan</p>
+</div>
+    <div class="nav-footer-right">
+<p>Singapore Management University · 2026</p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

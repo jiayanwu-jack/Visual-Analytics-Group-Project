@@ -1,0 +1,114 @@
+---
+title: ""
+toc: false
+page-layout: full
+format:
+  html:
+    grid:
+      body-width: 1100px
+---
+
+::: {.hero}
+<div class="eyebrow"><span class="chip">VAST CHALLENGE 2026</span> Mini-Challenge 1</div>
+
+# Project HarborCrest: Anatomy of an Information Leak
+
+<p class="sub">Did TenantThread's AI agents deliberately leak the merger — or did the compliance system simply break down under pressure?</p>
+
+<p class="lede">On 5 June 2046, confidential merger information between TenantThread and CivicLoom Realty Partners surfaced online at 5:00 PM — exactly one hour before the official embargo lift. We use network analysis, text mining, and interactive visual analytics across 912 internal communications to reconstruct what really happened.</p>
+
+<p class="authors">A project by <strong>BUI Tien Thanh</strong>, <strong>HU Yue</strong> &amp; <strong>WU Jiayan</strong> · ISSS608 Visual Analytics &amp; Applications</p>
+
+<div class="cta">
+  <a class="btn-hero primary" href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank">🚀 Launch Shiny App</a>
+  <a class="btn-hero ghost" href="proposal.html">📄 Read the Proposal</a>
+  <a class="btn-hero ghost" href="poster.html">🖼️ View the Poster</a>
+</div>
+:::
+
+## The investigation at a glance
+
+::: {.stat-strip}
+::: {.stat}
+<div class="num">912</div><div class="lbl">Internal communications</div>
+:::
+::: {.stat}
+<div class="num">7</div><div class="lbl">AI agents monitored</div>
+:::
+::: {.stat}
+<div class="num">14</div><div class="lbl">Days analysed</div>
+:::
+::: {.stat}
+<div class="num">60</div><div class="lbl">Minutes before embargo</div>
+:::
+:::
+
+::: {.keyq}
+<div class="label">Central Investigative Question</div>
+<p>Did TenantThread's team deliberately leak the merger information, or did the compliance system simply break down under pressure?</p>
+:::
+
+## Explore the project
+
+::: {.card-grid}
+
+::: {.feature-card}
+<div class="ic blue">📄</div>
+### Proposal
+<p>The full research proposal — motivation, objectives, data, methodology, prototype sketches and project schedule.</p>
+<a class="more" href="proposal.html">Read the proposal →</a>
+:::
+
+::: {.feature-card}
+<div class="ic teal">📊</div>
+### Shiny App
+<p>An interactive dashboard to investigate the breach through network, timeline, text and agent-behaviour lenses.</p>
+<a class="more" href="shiny.html">Open the app →</a>
+:::
+
+::: {.feature-card}
+<div class="ic amber">📝</div>
+### Minutes of Meeting
+<p>Three documented team meetings tracing our analysis, alignment on the conclusion, and task delegation.</p>
+<a class="more" href="minutes.html">View the minutes →</a>
+:::
+
+::: {.feature-card}
+<div class="ic purple">🖼️</div>
+### Poster
+<p>A single-page visual summary of the methodology, key evidence, and findings of the investigation.</p>
+<a class="more" href="poster.html">See the poster →</a>
+:::
+
+:::
+
+## What we set out to do
+
+The investigation is organised around four analytical objectives, each surfaced as an interactive lens inside the Shiny application:
+
+1. **Reconstruct the event sequence** during the breach window (4:00–6:00 PM, 5 June) using network analysis and timeline visualisation.
+2. **Analyse behavioural patterns** by comparing breach-day behaviour against a baseline to detect anomalies consistent with deliberate action or system strain.
+3. **Identify key actors and information flow** through centrality analysis to find critical coordinators and bottlenecks.
+4. **Apply a competing-hypotheses framework** to systematically weigh evidence for a deliberate leak versus a system breakdown.
+
+## The team
+
+::: {.team-grid}
+::: {.member}
+<div class="avatar">BT</div>
+### BUI Tien Thanh
+<div class="role">Task 2 · Project Schedule</div>
+:::
+::: {.member}
+<div class="avatar">HY</div>
+### HU Yue
+<div class="role">Task 3 · Prototype Design</div>
+:::
+::: {.member}
+<div class="avatar">WJ</div>
+### WU Jiayan
+<div class="role">Data Exploration · Task 1 · Methodology</div>
+:::
+:::
+
+<p style="text-align:center;color:#64748b;font-size:.9rem;margin-top:2.4rem;">Singapore Management University · Master of IT in Business · ISSS608 · 2026</p>

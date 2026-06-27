@@ -1,0 +1,184 @@
+[
+  {
+    "objectID": "poster.html",
+    "href": "poster.html",
+    "title": "Project Poster",
+    "section": "",
+    "text": "Our poster condenses the entire investigation — methodology, key evidence, and findings — into one visual narrative.\n\n🔍 Open full-screen poster ⬇️ Download as image (JPG) 📊 Download editable (PPTX)\n\n\n  \n\n\nClick the poster to open the interactive full-screen version."
+  },
+  {
+    "objectID": "shiny.html",
+    "href": "shiny.html",
+    "title": "Interactive Shiny Application",
+    "section": "",
+    "text": "The centrepiece of this project is an interactive R Shiny dashboard that turns our analysis into an exploratory investigation tool. Filter the data, follow the timeline, trace the communication network, and weigh the evidence for each competing hypothesis."
+  },
+  {
+    "objectID": "shiny.html#live-application",
+    "href": "shiny.html#live-application",
+    "title": "Interactive Shiny Application",
+    "section": "Live application",
+    "text": "Live application\nThe app is deployed on shinyapps.io. If the frame below is blank, the instance may be spinning up from sleep — give it a few seconds, or open it directly using the button above.\n\n\n  wujiayan.shinyapps.io/VAST_Challenge_2026"
+  },
+  {
+    "objectID": "shiny.html#whats-inside",
+    "href": "shiny.html#whats-inside",
+    "title": "Interactive Shiny Application",
+    "section": "What’s inside",
+    "text": "What’s inside\nThe dashboard is organised into four tabs, mirroring the project’s analytical objectives:\n\n\n\n🗂️\n\n\nOverview\n\nOrientation to the case, the dataset, and the two competing hypotheses that frame the investigation.\n\n\n\n\n\n⏱️\n\n\nTimeline & Leak\n\nThe minute-by-minute breach window (4:00–6:00 PM, 5 June), highlighting the social-media leak and the embargo lift.\n\n\n\n\n\n🕸️\n\n\nAgent & Communication Flow\n\nThe communication network between the seven AI agents, with centrality metrics to surface key coordinators and bottlenecks.\n\n\n\n\n\n⚖️\n\n\nEvidence & Judgment\n\nA competing-hypotheses board that systematically weighs evidence for a deliberate leak versus a system breakdown."
+  },
+  {
+    "objectID": "shiny.html#built-with",
+    "href": "shiny.html#built-with",
+    "title": "Interactive Shiny Application",
+    "section": "Built with",
+    "text": "Built with\nThe application is written in R and assembled from the project’s three task modules (task1.R, task2.R, task3.R) into a single combined_app.R. Key packages include:\n\nInteractive dashboard — shiny, shinydashboard, bslib, DT\nNetwork analysis — tidygraph, igraph, ggraph, visNetwork\nText analysis — tidytext, quanteda, wordcloud\nVisualisation — ggplot2, plotly, lubridate, tidyverse"
+  },
+  {
+    "objectID": "shiny.html#run-it-locally",
+    "href": "shiny.html#run-it-locally",
+    "title": "Interactive Shiny Application",
+    "section": "Run it locally",
+    "text": "Run it locally\n# Clone the repository, then from the \"Shiny app\" folder:\ninstall.packages(c(\n  \"shiny\", \"shinydashboard\", \"bslib\", \"DT\", \"tidyverse\",\n  \"tidygraph\", \"igraph\", \"ggraph\", \"visNetwork\",\n  \"tidytext\", \"plotly\", \"lubridate\"\n))\n\nshiny::runApp(\"combined_app.R\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "section": "",
+    "text": "VAST CHALLENGE 2026 Mini-Challenge 1\n\n\n\n\nDid TenantThread’s AI agents deliberately leak the merger — or did the compliance system simply break down under pressure?\n\n\nOn 5 June 2046, confidential merger information between TenantThread and CivicLoom Realty Partners surfaced online at 5:00 PM — exactly one hour before the official embargo lift. We use network analysis, text mining, and interactive visual analytics across 912 internal communications to reconstruct what really happened.\n\n\nA project by BUI Tien Thanh, HU Yue & WU Jiayan · ISSS608 Visual Analytics & Applications\n\n\n🚀 Launch Shiny App 📄 Read the Proposal 🖼️ View the Poster"
+  },
+  {
+    "objectID": "index.html#the-investigation-at-a-glance",
+    "href": "index.html#the-investigation-at-a-glance",
+    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "section": "The investigation at a glance",
+    "text": "The investigation at a glance\n\n\n\n912\n\n\nInternal communications\n\n\n\n\n7\n\n\nAI agents monitored\n\n\n\n\n14\n\n\nDays analysed\n\n\n\n\n60\n\n\nMinutes before embargo\n\n\n\n\n\nCentral Investigative Question\n\n\nDid TenantThread’s team deliberately leak the merger information, or did the compliance system simply break down under pressure?"
+  },
+  {
+    "objectID": "index.html#explore-the-project",
+    "href": "index.html#explore-the-project",
+    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "section": "Explore the project",
+    "text": "Explore the project\n\n\n\n📄\n\n\nProposal\n\nThe full research proposal — motivation, objectives, data, methodology, prototype sketches and project schedule.\n\nRead the proposal →\n\n\n\n\n📊\n\n\nShiny App\n\nAn interactive dashboard to investigate the breach through network, timeline, text and agent-behaviour lenses.\n\nOpen the app →\n\n\n\n\n📝\n\n\nMinutes of Meeting\n\nThree documented team meetings tracing our analysis, alignment on the conclusion, and task delegation.\n\nView the minutes →\n\n\n\n\n🖼️\n\n\nPoster\n\nA single-page visual summary of the methodology, key evidence, and findings of the investigation.\n\nSee the poster →"
+  },
+  {
+    "objectID": "index.html#what-we-set-out-to-do",
+    "href": "index.html#what-we-set-out-to-do",
+    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "section": "What we set out to do",
+    "text": "What we set out to do\nThe investigation is organised around four analytical objectives, each surfaced as an interactive lens inside the Shiny application:\n\nReconstruct the event sequence during the breach window (4:00–6:00 PM, 5 June) using network analysis and timeline visualisation.\nAnalyse behavioural patterns by comparing breach-day behaviour against a baseline to detect anomalies consistent with deliberate action or system strain.\nIdentify key actors and information flow through centrality analysis to find critical coordinators and bottlenecks.\nApply a competing-hypotheses framework to systematically weigh evidence for a deliberate leak versus a system breakdown."
+  },
+  {
+    "objectID": "index.html#the-team",
+    "href": "index.html#the-team",
+    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "section": "The team",
+    "text": "The team\n\n\n\nBT\n\n\nBUI Tien Thanh\n\nTask 2 · Project Schedule\n\n\n\n\n\nHY\n\n\nHU Yue\n\nTask 3 · Prototype Design\n\n\n\n\n\nWJ\n\n\nWU Jiayan\n\nData Exploration · Task 1 · Methodology\n\n\n\n\n\nSingapore Management University · Master of IT in Business · ISSS608 · 2026"
+  },
+  {
+    "objectID": "proposal.html",
+    "href": "proposal.html",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "",
+    "text": "On June 5th, 2046, confidential merger information between TenantThread and CivicLoom Realty Partners (codenamed “Project HarborCrest”) was leaked on social media at 5:00 PM—exactly one hour before the official 6:00 PM embargo lift. This premature disclosure triggered an investigation into whether the leak was deliberate sabotage or an organizational failure under extreme pressure.\nTenantThread operated with 7 AI agents managing communications, compliance, and social media during the critical two-week period leading to the announcement. The breach raises fundamental questions about AI-driven organizational systems: when they fail, is it by design or by overload?\nCentral Investigative Question: Did TenantThread’s team deliberately leak the merger information, or did the compliance system simply break down under pressure?\nThis project will use visual analytics, network analysis, and text mining to examine 912 internal communications across 14 days to distinguish between these competing explanations."
+  },
+  {
+    "objectID": "proposal.html#dataset-description",
+    "href": "proposal.html#dataset-description",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "4.1 Dataset Description",
+    "text": "4.1 Dataset Description\n\nSource: VAST Challenge 2026 Mini-Challenge 1 (MC1)\nFile: MC1_final.json\nFormat: Nested JSON structure\nSize: 912 communications across 23 time-stamped rounds\nAgents: 7 AI agents (Legal, PR, Social Media, Quality, Judge, PR Intern, Intern)\nTime Period: May 23, 2046 - June 5, 2046 (14 days)\nCritical Window: June 5, 2046, 4:00 PM - 6:00 PM"
+  },
+  {
+    "objectID": "proposal.html#key-data-components",
+    "href": "proposal.html#key-data-components",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "4.2 Key Data Components",
+    "text": "4.2 Key Data Components\n\n\n\n\n\n\n\n\nComponent\nDescription\nRecords\n\n\n\n\ncommunications\nAgent messages with metadata\n912 messages\n\n\nenvironment_context\nExternal events and media pressure\n23 rounds\n\n\ninternal_state\nAgent private reasoning (sparse)\n86 records\n\n\nrounds\nTime-stamped system snapshots\n23 rounds"
+  },
+  {
+    "objectID": "proposal.html#important-variables",
+    "href": "proposal.html#important-variables",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "4.3 Important Variables",
+    "text": "4.3 Important Variables\nNetwork Construction: - agent_id: Agent identifier for nodes - responding_to: Reply reference for building edges - channel: Communication channel (comms_huddle, one_on_one_chat, side_huddle, etc.)\nText Analysis: - message_text: Full message content - internal_state: Private agent reasoning (reacting, rationalizing, deliberating)\nTemporal Analysis: - timestamp: Message datetime - round_hour: Round time marker\nContext: - environment_context: External events, media pressure, critical deadlines - message_type: Type of communication"
+  },
+  {
+    "objectID": "proposal.html#shiny-app-design",
+    "href": "proposal.html#shiny-app-design",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "6.1 Shiny App Design",
+    "text": "6.1 Shiny App Design\nThe proposed Shiny app is designed as an interactive dashboard for investigating whether the TenantThread merger exposure was a deliberate leak or a system-control failure. The prototype contains four main tabs:\n\n\n\n\n\n\n\nFigure 2: Low-fidelity Shiny App prototype design.\n\n\n\n\n\n6.1.1 Tab 1: Overview\n\nProvides a high-level summary of the crisis.\nShows key indicators such as total messages, merger-related messages, leak/exposure signals, and pre-embargo public exposure.\nPresents the final interpretation: internal confidentiality leak enabled by system-level control failure.\n\n\n\n6.1.2 Tab 2: Timeline & Slack Leak\n\nFocuses on how the crisis developed over time.\nDisplays communication volume, pressure signal heatmap, and the Slack screenshot escalation timeline.\nHighlights the turning point from market inference to direct internal leakage.\n\n\n\n6.1.3 Tab 3: Agent & Communication Flow\n\nShows which agents were most involved in the communication and pressure patterns.\nIncludes agent-level pressure exposure and communication-flow visuals.\nHelps users understand why the system failed to contain sensitive information.\n\n\n\n6.1.4 Tab 4: Evidence & Judgment\n\nSummarises the final evidence used to classify the incident.\nDisplays the evidence interpretation matrix comparing internal leak, system breakdown, and senior-orchestrated leak.\nProvides the final judgment that the incident was an internal leak amplified by weak multi-agent controls, not a proven senior-level deliberate leak."
+  },
+  {
+    "objectID": "proposal.html#data-processing",
+    "href": "proposal.html#data-processing",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "7.1 Data Processing",
+    "text": "7.1 Data Processing\n\ntidyverse: Data manipulation and transformation\njsonlite: JSON data import and parsing\nlubridate: Date and time handling\npacman: Package management"
+  },
+  {
+    "objectID": "proposal.html#network-analysis",
+    "href": "proposal.html#network-analysis",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "7.2 Network Analysis",
+    "text": "7.2 Network Analysis\n\nigraph: Network construction and metrics\ntidygraph: Tidy graph data structures\nggraph: Network visualization with ggplot2 syntax\nvisNetwork: Interactive network graphs\nwidyr: Pairwise operations for network building"
+  },
+  {
+    "objectID": "proposal.html#text-analysis",
+    "href": "proposal.html#text-analysis",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "7.3 Text Analysis",
+    "text": "7.3 Text Analysis\n\ntidytext: Text mining and tidy text principles\ntm: Text mining framework\nwordcloud: Word cloud generation"
+  },
+  {
+    "objectID": "proposal.html#visualization",
+    "href": "proposal.html#visualization",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "7.4 Visualization",
+    "text": "7.4 Visualization\n\nggplot2: Static visualizations\nplotly: Interactive plots\nggtext: Enhanced text rendering\npatchwork: Combining multiple plots\nscales: Scale functions"
+  },
+  {
+    "objectID": "proposal.html#interactive-dashboard",
+    "href": "proposal.html#interactive-dashboard",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "7.5 Interactive Dashboard",
+    "text": "7.5 Interactive Dashboard\n\nshiny: Web application framework\nshinydashboard: Dashboard layout components\nDT: Interactive data tables\nshinyWidgets: Additional UI widgets"
+  },
+  {
+    "objectID": "proposal.html#key-milestones",
+    "href": "proposal.html#key-milestones",
+    "title": "Group Project Proposal: VAST Challenge 2026 MC1",
+    "section": "8.1 Key Milestones",
+    "text": "8.1 Key Milestones\n\nEnd of Week 2: Complete all static analyses (network, text, timeline)\nEnd of Week 4: Working Shiny dashboard with all major features\nEnd of Week 5: Final deliverables ready for presentation"
+  },
+  {
+    "objectID": "minutes.html",
+    "href": "minutes.html",
+    "title": "Minutes of Meeting",
+    "section": "",
+    "text": "This page documents the three project meetings held by the team, tracing our path from initial analysis through alignment on the final conclusion to the delegation of tasks. The original Word documents are available for download below."
+  },
+  {
+    "objectID": "minutes.html#meeting-1",
+    "href": "minutes.html#meeting-1",
+    "title": "Minutes of Meeting",
+    "section": "Meeting 1 — Project Kick-off & Assignment Review",
+    "text": "Meeting 1 — Project Kick-off & Assignment Review\n\n\n\n1\n\n\n\nVisual Analytics Project Discussion 1\n\n\n📅 27 May 2026🕚 11:04 AM · 27 min💻 Zoom Online👥 Thanh · Yue · Jiayan\n\n\n\n1. Take-Home Assignment 2 Discussion\n\nOverview — BUI Tien Thanh reviewed the requirements for Mini-Challenge 1: a network-graph dataset representing a networking data center that the team must analyse and support with visual evidence (Question 3 in particular requires visuals/proof).\nChallenges — Members noted that working with a network dataset is difficult, as it is a new data format for the team.\nAnalysis & Findings\n\nWU Jiayan shared an early analysis suggesting the leak was deliberate and intentional rather than a system failure, based on a timeline of social-media posts and senior–junior agent interactions leading up to the 5 June announcement.\nBUI Tien Thanh and HU Yue noted conflicting preliminary findings on whether the incident was a breakdown or an intentional leak, agreeing the results needed further alignment.\n\nLearning Resources — Review Lesson 9 (“Visual Analytics for Network Data”); text analysis of the conversations will be critical.\nProfessor Consultation — Book a consultation if the team hits persistent roadblocks, bringing specific, well-thought-out questions.\n\n2. Group Project Planning\n\nScope — Build an interactive Shiny application from the Assignment 2 analysis, allowing users to filter elements.\nObjectives — Primarily an academic demonstration of Shiny and analytical skills.\nWork Distribution — Rather than picking tasks immediately, all members complete Assignment 2 individually, then assign project responsibilities based on who executed each section best.\nTimeline — Assignment 2 due Sunday 7 June; BUI Tien Thanh to set up a shared GitHub repository.\n\n3. Action Items\n\n\n\n\n\n\n\n\nAction Item\nResponsible\nDeadline\n\n\n\n\nComplete Take-Home Assignment 2\nAll members\nOngoing / 7 June\n\n\nSet up shared GitHub repository\nBUI Tien Thanh\nBefore next meeting\n\n\nSchedule next alignment meeting\nAll members\nAround the A2 deadline"
+  },
+  {
+    "objectID": "minutes.html#meeting-2",
+    "href": "minutes.html#meeting-2",
+    "title": "Minutes of Meeting",
+    "section": "Meeting 2 — Conclusion Alignment & Task Delegation",
+    "text": "Meeting 2 — Conclusion Alignment & Task Delegation\n\n\n\n2\n\n\n\nVisual Analytics Project Discussion 2\n\n\n📅 6 June 2026🕒 3:50 PM · 60 min📍 LKCSB GSR 1-1👥 Thanh · Yue · Jiayan\n\n\n\n1. Project Case Conclusion Alignment\nThe team aligned on the final conclusion for the project.\n\nInitial perspectives\n\nBUI Tien Thanh — leaned toward a system breakdown under pressure, citing suspicious vocabulary shifts and the “judge agent” failing repeatedly.\nHU Yue — proposed a combination: an intentional leak enabled by a control failure, followed by deliberate crisis management.\nWU Jiayan — early events (e.g. the 29 May social-media message) were unintentional system failures per the agents’ internal-state logs, but the breach-day (5 June) actions were deliberate — agents purposefully excluded the newly deployed judge agent from side huddles to stage an early announcement.\n\nAgreed conclusion — Events before 4:00 PM on 5 June were unintentional system failures; actions after 4:00 PM, in response to the Southwind announcement, were deliberate and intentional.\n\n2. Proposal & Task Delegation\n\nDeadline — Officially Wednesday 10 June, buffer until Friday; team aims for Friday at the latest.\nAllocation — WU Jiayan: Methodology (diagrams & explanations) · BUI Tien Thanh: Project Schedule (Gantt) · HU Yue: Prototype / hand sketch.\nShiny app structure — A dashboard with multiple tabs and sub-tabs presenting the different tasks and visualisations.\n\n3. Repository & Version Control\n\nGitHub repository set up by BUI Tien Thanh.\nWorkflow via RStudio / VS Code terminals (git clone, pull, push).\nTo avoid merge conflicts, members notify the group on WeChat before editing/pushing proposal.qmd."
+  },
+  {
+    "objectID": "minutes.html#meeting-3",
+    "href": "minutes.html#meeting-3",
+    "title": "Minutes of Meeting",
+    "section": "Meeting 3 — Final Task Division",
+    "text": "Meeting 3 — Final Task Division\n\n\n\n3\n\n\n\nVisual Analytics Project Discussion 3\n\n\n📅 12 June 2026💬 WeChat (Online)👥 Thanh · Yue · Jiayan\n\n\n\nAgenda — Division of tasks for the Visual Analytics Project.\nDiscussion & Task Allocation\n\nWU Jiayan — Data Exploration and Task 1.\nBUI Tien Thanh — Task 2.\nHU Yue — Task 3.\n\nNext Steps — Each member’s individual work will be compiled and merged at a later stage to form the final project submission."
+  }
+]

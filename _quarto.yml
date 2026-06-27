@@ -1,0 +1,64 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - proposal.qmd
+    - shiny.qmd
+    - minutes.qmd
+    - poster.qmd
+  resources:
+    - "poster/poster_v2.html"
+    - "poster/poster_v2.jpg"
+    - "poster/poster_v2_editable.pptx"
+    - "Minutes of Meeting/*.docx"
+
+website:
+  title: "Project HarborCrest"
+  description: "VAST Challenge 2026 MC1 — Investigating the Information Leak at TenantThread"
+  site-url: "https://wujiayan.shinyapps.io/VAST_Challenge_2026"
+  open-graph: true
+  navbar:
+    background: primary
+    pinned: true
+    logo-alt: "Project HarborCrest"
+    title: "Project HarborCrest"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Proposal"
+        href: proposal.qmd
+      - text: "Shiny App"
+        href: shiny.qmd
+      - text: "Minutes of Meeting"
+        href: minutes.qmd
+      - text: "Poster"
+        href: poster.qmd
+    right:
+      - text: "Launch App"
+        href: "https://wujiayan.shinyapps.io/VAST_Challenge_2026"
+        target: _blank
+  page-footer:
+    border: true
+    left: |
+      **VAST Challenge 2026 · Mini-Challenge 1** &nbsp;·&nbsp; ISSS608 Visual Analytics & Applications
+    center: |
+      BUI Tien Thanh &nbsp;·&nbsp; HU Yue &nbsp;·&nbsp; WU Jiayan
+    right: |
+      Singapore Management University · 2026
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    toc-title: "On this page"
+    smooth-scroll: true
+    anchor-sections: true
+    link-external-newwindow: true
+    link-external-icon: true
+    grid:
+      body-width: 1000px

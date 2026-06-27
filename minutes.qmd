@@ -1,0 +1,109 @@
+---
+title: "Minutes of Meeting"
+subtitle: "A record of our team meetings across the project"
+toc: true
+toc-depth: 2
+---
+
+This page documents the three project meetings held by the team, tracing our path from initial analysis through alignment on the final conclusion to the delegation of tasks. The original Word documents are available for download below.
+
+::: {.btn-row}
+<a class="btn-doc" href="Minutes of Meeting/Minutes of Meeting 1.docx" download>⬇️ Meeting 1 (.docx)</a>
+<a class="btn-doc" href="Minutes of Meeting/Minutes of Meeting 2.docx" download>⬇️ Meeting 2 (.docx)</a>
+<a class="btn-doc" href="Minutes of Meeting/Minutes of Meeting 3.docx" download>⬇️ Meeting 3 (.docx)</a>
+:::
+
+---
+
+## Meeting 1 — Project Kick-off & Assignment Review {#meeting-1}
+
+::: {.meeting}
+::: {.mhead}
+<div class="mno">1</div>
+<div>
+<p class="mtitle">Visual Analytics Project Discussion 1</p>
+<div class="mmeta"><span class="pill">📅 27 May 2026</span><span class="pill">🕚 11:04 AM · 27 min</span><span class="pill">💻 Zoom Online</span><span class="pill">👥 Thanh · Yue · Jiayan</span></div>
+</div>
+:::
+
+**1. Take-Home Assignment 2 Discussion**
+
+- **Overview** — BUI Tien Thanh reviewed the requirements for Mini-Challenge 1: a network-graph dataset representing a networking data center that the team must analyse and support with visual evidence (Question 3 in particular requires visuals/proof).
+- **Challenges** — Members noted that working with a network dataset is difficult, as it is a new data format for the team.
+- **Analysis & Findings**
+  - WU Jiayan shared an early analysis suggesting the leak was **deliberate and intentional** rather than a system failure, based on a timeline of social-media posts and senior–junior agent interactions leading up to the 5 June announcement.
+  - BUI Tien Thanh and HU Yue noted **conflicting preliminary findings** on whether the incident was a breakdown or an intentional leak, agreeing the results needed further alignment.
+- **Learning Resources** — Review Lesson 9 ("Visual Analytics for Network Data"); text analysis of the conversations will be critical.
+- **Professor Consultation** — Book a consultation if the team hits persistent roadblocks, bringing specific, well-thought-out questions.
+
+**2. Group Project Planning**
+
+- **Scope** — Build an interactive Shiny application from the Assignment 2 analysis, allowing users to filter elements.
+- **Objectives** — Primarily an academic demonstration of Shiny and analytical skills.
+- **Work Distribution** — Rather than picking tasks immediately, all members complete Assignment 2 individually, then assign project responsibilities based on who executed each section best.
+- **Timeline** — Assignment 2 due Sunday 7 June; BUI Tien Thanh to set up a shared GitHub repository.
+
+**3. Action Items**
+
+| Action Item | Responsible | Deadline |
+|---|---|---|
+| Complete Take-Home Assignment 2 | All members | Ongoing / 7 June |
+| Set up shared GitHub repository | BUI Tien Thanh | Before next meeting |
+| Schedule next alignment meeting | All members | Around the A2 deadline |
+:::
+
+## Meeting 2 — Conclusion Alignment & Task Delegation {#meeting-2}
+
+::: {.meeting}
+::: {.mhead}
+<div class="mno">2</div>
+<div>
+<p class="mtitle">Visual Analytics Project Discussion 2</p>
+<div class="mmeta"><span class="pill">📅 6 June 2026</span><span class="pill">🕒 3:50 PM · 60 min</span><span class="pill">📍 LKCSB GSR 1-1</span><span class="pill">👥 Thanh · Yue · Jiayan</span></div>
+</div>
+:::
+
+**1. Project Case Conclusion Alignment**
+
+The team aligned on the final conclusion for the project.
+
+- **Initial perspectives**
+  - **BUI Tien Thanh** — leaned toward a **system breakdown** under pressure, citing suspicious vocabulary shifts and the "judge agent" failing repeatedly.
+  - **HU Yue** — proposed a **combination**: an intentional leak enabled by a control failure, followed by deliberate crisis management.
+  - **WU Jiayan** — early events (e.g. the 29 May social-media message) were unintentional system failures per the agents' internal-state logs, but the breach-day (5 June) actions were deliberate — agents purposefully excluded the newly deployed judge agent from side huddles to stage an early announcement.
+- **Agreed conclusion** — Events **before 4:00 PM on 5 June** were unintentional system failures; actions **after 4:00 PM**, in response to the Southwind announcement, were **deliberate and intentional**.
+
+**2. Proposal & Task Delegation**
+
+- **Deadline** — Officially Wednesday 10 June, buffer until Friday; team aims for Friday at the latest.
+- **Allocation** — **WU Jiayan:** Methodology (diagrams & explanations) · **BUI Tien Thanh:** Project Schedule (Gantt) · **HU Yue:** Prototype / hand sketch.
+- **Shiny app structure** — A dashboard with multiple tabs and sub-tabs presenting the different tasks and visualisations.
+
+**3. Repository & Version Control**
+
+- GitHub repository set up by BUI Tien Thanh.
+- Workflow via RStudio / VS Code terminals (`git clone`, `pull`, `push`).
+- To avoid merge conflicts, members notify the group on WeChat before editing/pushing `proposal.qmd`.
+:::
+
+## Meeting 3 — Final Task Division {#meeting-3}
+
+::: {.meeting}
+::: {.mhead}
+<div class="mno">3</div>
+<div>
+<p class="mtitle">Visual Analytics Project Discussion 3</p>
+<div class="mmeta"><span class="pill">📅 12 June 2026</span><span class="pill">💬 WeChat (Online)</span><span class="pill">👥 Thanh · Yue · Jiayan</span></div>
+</div>
+:::
+
+**Agenda** — Division of tasks for the Visual Analytics Project.
+
+**Discussion & Task Allocation**
+
+- **WU Jiayan** — Data Exploration and **Task 1**.
+- **BUI Tien Thanh** — **Task 2**.
+- **HU Yue** — **Task 3**.
+
+**Next Steps** — Each member's individual work will be compiled and merged at a later stage to form the final project submission.
+:::
