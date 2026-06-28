@@ -15,15 +15,15 @@ project:
     - "Minutes of Meeting/*.docx"
 
 website:
-  title: "Project HarborCrest"
+  title: "TenantThread Mini-Challenge"
   description: "VAST Challenge 2026 MC1 — Investigating the Information Leak at TenantThread"
   site-url: "https://wujiayan.shinyapps.io/VAST_Challenge_2026"
   open-graph: true
   navbar:
     background: primary
     pinned: true
-    logo-alt: "Project HarborCrest"
-    title: "Project HarborCrest"
+    logo-alt: "TenantThread Mini-Challenge"
+    title: "TenantThread Mini-Challenge"
     left:
       - text: "Home"
         href: index.qmd
