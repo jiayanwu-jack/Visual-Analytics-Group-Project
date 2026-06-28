@@ -5,6 +5,7 @@ COMBINED_APP <- TRUE
 source("task1.R", local = TRUE)
 source("task2.R", local = TRUE)
 source("task3.R", local = TRUE)
+source("summary_tab.R", local = TRUE)
 
 ui <- page_navbar(
   title          = mc1_title,
@@ -15,6 +16,7 @@ ui <- page_navbar(
   task1_panel_task,
   task2_ui,
   task3_ui,
+  summary_ui,
   nav_spacer(),
   nav_item(
     tags$span(
@@ -28,6 +30,7 @@ server <- function(input, output, session) {
   task1_server(input, output, session)
   task2_server(input, output, session)
   task3_server(input, output, session)
+  summary_server(input, output, session)
 }
 
 shinyApp(ui = ui, server = server)
