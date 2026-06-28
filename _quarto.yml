@@ -11,6 +11,7 @@ project:
     - "poster/poster_v2.html"
     - "poster/poster_v2.jpg"
     - "poster/poster_v2_editable.pptx"
+    - "poster/poster_assets/**"
     - "Minutes of Meeting/*.docx"
 
 website:
