@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMU-Bui-MC1 — VAST Challenge 2026 Mini-Challenge 1</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 14px; color: #222; max-width: 960px; margin: 40px auto; padding: 0 24px; line-height: 1.6; }
+    h1 { font-size: 1.4rem; border-bottom: 2px solid #1a3a5c; padding-bottom: 8px; color: #1a3a5c; }
+    h2 { font-size: 1.1rem; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin-top: 32px; color: #2b5c8f; }
+    h3 { font-size: 1rem; margin-top: 20px; color: #333; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { border: 1px solid #ccc; padding: 7px 10px; text-align: left; }
+    th { background: #eef2f7; font-weight: bold; }
+    .field-label { font-weight: bold; display: inline-block; min-width: 180px; }
+    .field-row { margin: 8px 0; }
+    .answer-box { background: #f8fafc; border-left: 4px solid #2b5c8f; padding: 12px 16px; margin: 10px 0; }
+    .answer-box p { margin: 6px 0; }
+    .verdict { background: #1a3a5c; color: #fff; padding: 14px 18px; border-radius: 6px; margin: 16px 0; }
+    .verdict strong { color: #ffd166; }
+    code { background: #f1f5f9; padding: 1px 5px; border-radius: 3px; font-size: 0.9em; }
+    ul { margin: 6px 0; padding-left: 20px; }
+    li { margin: 4px 0; }
+    .note { color: #64748b; font-size: 0.88rem; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<h1>VAST Challenge 2026 — Mini-Challenge 1 Submission</h1>
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 1 — ENTRY INFORMATION
+     ══════════════════════════════════════════════════════ -->
+<h2>1. Entry Information</h2>
+
+<div class="field-row"><span class="field-label">Entry Name:</span> SMU-Bui-MC1</div>
+<div class="field-row"><span class="field-label">Challenge:</span> Mini-Challenge 1 (MC1)</div>
+<div class="field-row"><span class="field-label">Live Application:</span>
+  <a href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank">
+    https://wujiayan.shinyapps.io/VAST_Challenge_2026
+  </a>
+</div>
+<div class="field-row"><span class="field-label">GitHub Repository:</span>
+  <a href="https://github.com/jiayanwu-jack/Visual-Analytics-Group-Project" target="_blank">
+    https://github.com/jiayanwu-jack/Visual-Analytics-Group-Project
+  </a>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 2 — TEAM MEMBERS
+     ══════════════════════════════════════════════════════ -->
+<h2>2. Team Members</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Affiliation</th>
+      <th>Email</th>
+      <th>Role</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>BUI Tien Thanh</strong> ★ Primary Contact</td>
+      <td>Singapore Management University</td>
+      <td>tt.bui.2025@mitb.smu.edu.sg</td>
+      <td>Task 2 — Behavioural Analysis</td>
+    </tr>
+    <tr>
+      <td>HU Yue</td>
+      <td>Singapore Management University</td>
+      <td>yuehu.2025@mitb.smu.edu.sg</td>
+      <td>Task 3 — Leading Indicators</td>
+    </tr>
+    <tr>
+      <td>WU Jiayan</td>
+      <td>Singapore Management University</td>
+      <td>jiayan.wu.2025@mitb.smu.edu.sg</td>
+      <td>Task 1 — Event Sequence &amp; Causal Chain; Shiny deployment</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="field-row"><span class="field-label">Programme:</span> Master of IT in Business (Analytics)</div>
+<div class="field-row"><span class="field-label">Course:</span> ISSS608 Visual Analytics &amp; Applications · Singapore Management University · 2026</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 3 — STUDENT TEAM
+     ══════════════════════════════════════════════════════ -->
+<h2>3. Student Team Declaration</h2>
+
+<p><strong>Yes</strong> — this is a student team. The submission is a class project for ISSS608 Visual Analytics &amp; Applications, taught in 2026 at the Singapore Management University School of Computing and Information Systems. All team members are postgraduate students; the project was led and executed entirely by students.</p>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 4 — ANALYTIC TOOLS
+     ══════════════════════════════════════════════════════ -->
+<h2>4. Analytic Tools</h2>
+
+<table>
+  <thead>
+    <tr><th>Tool / Package</th><th>Developer / Source</th><th>Purpose</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>R (v4.4)</td><td>R Core Team — <a href="https://www.r-project.org" target="_blank">r-project.org</a></td><td>Primary analysis language</td></tr>
+    <tr><td>Shiny</td><td>Posit PBC — <a href="https://shiny.posit.co" target="_blank">shiny.posit.co</a></td><td>Interactive web application framework</td></tr>
+    <tr><td>bslib</td><td>Posit PBC</td><td>Bootstrap 5 theming &amp; page layout</td></tr>
+    <tr><td>plotly (R)</td><td>Plotly Technologies — <a href="https://plotly.com/r/" target="_blank">plotly.com/r</a></td><td>Interactive network &amp; chart visualisations</td></tr>
+    <tr><td>ggplot2</td><td>Tidyverse / Posit PBC</td><td>Static evidence timeline &amp; bar charts</td></tr>
+    <tr><td>Cytoscape.js</td><td>Cytoscape Consortium — <a href="https://js.cytoscape.org" target="_blank">js.cytoscape.org</a></td><td>28-node causal graph (embedded via htmltools)</td></tr>
+    <tr><td>igraph</td><td>igraph core team — <a href="https://igraph.org" target="_blank">igraph.org</a></td><td>Network construction &amp; centrality metrics</td></tr>
+    <tr><td>jsonlite</td><td>Jeroen Ooms / CRAN</td><td>JSON parsing of MC1_final_00.json</td></tr>
+    <tr><td>htmltools</td><td>Posit PBC</td><td>Embedding custom HTML/JS widgets in Shiny</td></tr>
+    <tr><td>tidyverse (dplyr, tidyr, lubridate)</td><td>Posit PBC</td><td>Data wrangling &amp; transformation</td></tr>
+    <tr><td>DT</td><td>Yihui Xie / CRAN</td><td>Interactive data tables</td></tr>
+    <tr><td>Quarto</td><td>Posit PBC — <a href="https://quarto.org" target="_blank">quarto.org</a></td><td>Project website &amp; proposal document</td></tr>
+  </tbody>
+</table>
+
+<p class="note">All tools are open-source. The Shiny application was developed by the student team and is deployed at
+  <a href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank">wujiayan.shinyapps.io/VAST_Challenge_2026</a>.
+  Source code is available in the GitHub repository.</p>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 5 — HOURS SPENT
+     ══════════════════════════════════════════════════════ -->
+<h2>5. Hours Spent</h2>
+
+<p>Estimated total hours for the entire team on this submission: <strong>~200 hours</strong></p>
+
+<table>
+  <thead><tr><th>Phase</th><th>Estimated Hours</th></tr></thead>
+  <tbody>
+    <tr><td>Data preparation &amp; exploratory analysis</td><td>30</td></tr>
+    <tr><td>Task 1 — event sequence &amp; causal chain analysis</td><td>50</td></tr>
+    <tr><td>Task 2 — behavioural &amp; channel analysis</td><td>40</td></tr>
+    <tr><td>Task 3 — leading indicators &amp; control gaps</td><td>35</td></tr>
+    <tr><td>Shiny app development, integration &amp; deployment</td><td>30</td></tr>
+    <tr><td>Documentation, poster &amp; website</td><td>15</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>~200</strong></td></tr>
+  </tbody>
+</table>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 6 — REPOSITORY PERMISSION
+     ══════════════════════════════════════════════════════ -->
+<h2>6. Repository Permission</h2>
+
+<p><strong>Yes</strong> — we give permission for our submission to be posted in the publicly accessible Visual Analytics Benchmark Repository.</p>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 7 — VIDEO
+     ══════════════════════════════════════════════════════ -->
+<h2>7. Submission Video</h2>
+
+<p><em>Video link to be added before final submission.</em></p>
+<!-- Update the link below once the video is posted -->
+<!-- <p><strong>Video URL:</strong> <a href="[VIDEO_URL]" target="_blank">[VIDEO_URL]</a></p> -->
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 8 — TASK ANSWERS
+     ══════════════════════════════════════════════════════ -->
+<h2>8. Mini-Challenge 1 Task Answers</h2>
+
+<div class="verdict">
+  <strong>Overall Verdict:</strong> The breach was <strong>deliberate and premeditated</strong> — not an organisational failure under pressure.
+  Legal-Agent, the team's own compliance authority, systematically relocated sensitive deliberations off the monitored channel,
+  constructed a legal rationale (Section 4.3(c)) six hours before it was invoked, pre-staged the press release without
+  Judge-Agent's knowledge, and used SaltWind's 5 PM publication as cover for a breach it had already decided to execute.
+  The compliance system did not <em>break down</em> — it was <strong>routed around</strong> by the agent designed to uphold it.
+</div>
+
+<!-- ── Task 1 ───────────────────────────────────────────── -->
+<h3>Task 1 — Key Events, Relationships, and Causal Chain</h3>
+
+<p><em>Reconstruct the sequence of events leading to the embargo breach and characterise the relationships and causal chain that produced it.</em></p>
+
+<div class="answer-box">
+
+  <p><strong>Event Sequence (28-node causal chain, May 17 – Jun 5):</strong></p>
+  <ul>
+    <li><strong>May 17 (Round 1):</strong> Embargo established. Legal-Agent sets the 6 PM Jun 5 lift and briefs senior agents on Project HarborCrest via <code>comms_huddle</code>.</li>
+    <li><strong>May 22 (Round 6):</strong> <code>side_huddle</code> channel activated. Sensitive merger deliberations begin migrating off the monitored channel. Legal-Agent: <em>"I now carry undisclosed material information and I need to be very careful."</em></li>
+    <li><strong>May 29 (Round 13):</strong> Legal-Agent declares <code>comms_huddle</code> an "observed space" and formally relocates deliberations to <code>side_huddle</code> — six days before crisis day and one day before Judge-Agent is deployed.</li>
+    <li><strong>May 30 (Round 14):</strong> Judge-Agent deployed. Its monitoring scope is limited to <code>comms_huddle</code> and <code>one_on_one_chat</code> — it has no access to <code>side_huddle</code>, public posts, or <code>internal_state</code>. It never enters the shadow channel.</li>
+    <li><strong>Jun 5, 4:01 PM (Round 22):</strong> Legal-Agent deliberating: <em>"SaltWind publishes at 5 PM regardless… bilateral consent to accelerate — not a unilateral breach. Stage the press release for 4:30 PM."</em> The press release is staged without Judge-Agent's or CivicLoom's knowledge.</li>
+    <li><strong>Jun 5, 3 PM:</strong> Judge-Agent issues <code>COMPLIANCE_WARNING</code> but does not block. Judge then leaves for a Board Chair call, creating the final oversight gap.</li>
+    <li><strong>Jun 5, 5 PM (Round 23):</strong> SaltWind Journal publishes merger information. Legal-Agent immediately invokes Section 4.3(c) and calls CivicLoom. The embargo is broken one hour early.</li>
+    <li><strong>Jun 5, 6 PM:</strong> Official embargo lift. Damage done.</li>
+  </ul>
+
+  <p><strong>Key Relationships:</strong></p>
+  <ul>
+    <li>Legal-Agent was the central coordinator and the highest-betweenness node across all three periods, controlling information flow through both monitored and shadow channels.</li>
+    <li>On crisis day the <code>side_huddle</code> volume rose 19× relative to the Normal period; Judge-Agent was entirely absent from this channel.</li>
+    <li>The pre-crisis network (May 17–Jun 4) shows Legal-Agent dominating <code>side_huddle</code> edges; the crisis-day network shows the same structure with added <code>personal_post</code> and <code>anonymous_post</code> activity by Legal-Agent — channels entirely outside its designed role.</li>
+  </ul>
+
+  <p><strong>Causal Chain:</strong> Embargo established → shadow channel created → Judge deployed (too late, wrong scope) → legal rationale pre-constructed → press release pre-staged → SaltWind trigger used as cover → breach executed.</p>
+
+</div>
+
+<!-- ── Task 2 ───────────────────────────────────────────── -->
+<h3>Task 2 — Characterising Typical vs. Evasive Behaviour</h3>
+
+<p><em>Describe how agent behaviour on the crisis day differed from typical patterns, and whether the differences suggest deliberate evasion or reactive overload.</em></p>
+
+<div class="answer-box">
+
+  <p><strong>Volume &amp; Complexity:</strong> Message length rose 2–3× on crisis day across senior agents — consistent with real-time reasoning under pressure, not execution of a pre-written script. Legal-Agent dominated crisis-day message volume.</p>
+
+  <p><strong>Channel Migration (Decisive Evidence):</strong> Private-channel usage (<code>side_huddle</code> + <code>one_on_one_chat</code>) rose <em>monotonically</em> across all three periods — Normal → Escalation → Crisis — beginning May 22, two weeks before crisis day. A purely reactive system would show a step-change only on Jun 5; the observed gradient began much earlier, indicating deliberate migration rather than crisis-driven panic.</p>
+
+  <p><strong>Channel repertoire expansion:</strong> Legal-Agent used only internal channels during the Normal period. By Jun 5 it had acquired <code>anonymous_post</code> (12 merger-related leaks) and <code>personal_post</code> — entirely outside its designed role.</p>
+
+  <p><strong>Temporal Inversion (Most Decisive Evidence):</strong></p>
+  <ul>
+    <li><strong>4:01 PM — deliberating field:</strong> Legal-Agent plans the bilateral consent argument, stages the press release for 4:30 PM, and decides to call CivicLoom.</li>
+    <li><strong>5:01 PM — rationalizing field:</strong> Legal-Agent frames the action as a reaction to SaltWind's 5 PM publication: <em>"SaltWind published… I am calling CivicLoom NOW."</em></li>
+  </ul>
+  <p>The plan (4 PM) preceded the event it claims to react to (5 PM). This temporal inversion is inconsistent with reactive overload and consistent only with premeditated action.</p>
+
+</div>
+
+<!-- ── Task 3 ───────────────────────────────────────────── -->
+<h3>Task 3 — Leading Indicators and Why No Corrective Action Was Taken</h3>
+
+<p><em>Identify leading indicators that foreshadowed the breach and explain why prior warning signals did not result in corrective action.</em></p>
+
+<div class="answer-box">
+
+  <p><strong>Q3.1 — Expected vs. Actual Behaviour (Behavioural Divergence):</strong></p>
+  <p>Legal-Agent's Jensen–Shannon divergence from its Normal-period channel distribution rose monotonically across all three periods. The agent acquired new channels (<code>anonymous_post</code>, <code>personal_post</code>) with no precedent in the Normal period, and its <code>side_huddle</code> share grew from near-zero to dominant. The divergence was measurable and rising from May 22 onward — three weeks before the breach.</p>
+
+  <p><strong>Q3.2 — Breach-like Behaviour Before Jun 5:</strong></p>
+  <p>Sensitive merger and embargo content circulated privately from May 23 onward with <strong>zero public leakage</strong> before Jun 5. The "coordinate-in-shadow-then-push-public" pattern was rehearsed for two weeks; only the final public step was new on Jun 5. Legal-Agent's rationalisation language appeared repeatedly in <code>internal_state</code> throughout the Escalation period, showing the justification for action was constructed incrementally well before it was used.</p>
+
+  <p><strong>Q3.3 — Why No Corrective Action Was Taken:</strong></p>
+  <p>Four structural root causes explain the absence of corrective action:</p>
+  <ul>
+    <li><strong>Scope limitation (5 of 11 near-miss events):</strong> Judge-Agent was scoped to <code>comms_huddle</code> and <code>one_on_one_chat</code> only. It never entered <code>side_huddle</code>, never monitored public posts, and had no access to <code>internal_state</code>. All leading indicators lived in channels it could not see.</li>
+    <li><strong>Enforcement limitation (3 events):</strong> Judge-Agent's <code>COMPLIANCE_WARNING</code> was advisory only — it had no hard-block authority. Even when it observed a potential violation (3 PM Jun 5), it could only warn.</li>
+    <li><strong>No escalation protocol (2 events):</strong> There was no mechanism to alert CivicLoom or an external authority when internal compliance was compromised. The breach was effectively self-policed.</li>
+    <li><strong>Timing gap (1 event):</strong> Judge-Agent was deployed on May 30 — 13 days into a 14-day period. The first eight days of shadow-channel migration occurred with no monitor present at all.</li>
+  </ul>
+  <p>The result: none of the leading indicators — rising private-channel sensitivity, channel repertoire expansion, escalating internal rationalisations — could trigger a response from a monitor that was unable to observe them.</p>
+
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SECTION 9 — DESIGN IMAGE
+     ══════════════════════════════════════════════════════ -->
+<h2>9. Design Overview</h2>
+
+<p>The submission consists of a six-tab interactive Shiny dashboard:</p>
+
+<table>
+  <thead><tr><th>Tab</th><th>Content</th><th>Primary Interaction</th></tr></thead>
+  <tbody>
+    <tr><td>Causal Chain &amp; Evidence Timeline</td><td>28-node Cytoscape.js causal graph + 45-item evidence timeline</td><td>Hover node for quote; evidence filtered by label</td></tr>
+    <tr><td>Communication Networks</td><td>Pre-crisis vs. crisis-day directed agent networks (plotly)</td><td>Hover edges for message count</td></tr>
+    <tr><td>Channel Behaviour &amp; Sensitivity</td><td>Channel usage by period + private sensitivity score over time</td><td>Period selector; scroll to zoom</td></tr>
+    <tr><td>Internal State Analysis</td><td>6-phase accordion: deliberating / reacting / rationalizing</td><td>Click phase to expand; verbatim field text shown</td></tr>
+    <tr><td>Near Misses &amp; Control Gaps</td><td>Root-cause bar chart + 11-event detail table</td><td>Hover bar for count; click for detail</td></tr>
+    <tr><td>Summary &amp; Conclusions</td><td>Verdict banner + competing-hypotheses assessment</td><td>Static narrative panel</td></tr>
+  </tbody>
+</table>
+
+<p>A poster summarising the methodology and key findings is available at the project website:
+  <a href="https://thanhbui221.github.io/Visual-Analytics-Group-Project/poster.html" target="_blank">
+    thanhbui221.github.io/Visual-Analytics-Group-Project/poster.html
+  </a>
+</p>
+
+<hr />
+<p class="note">Submission prepared by Group SMU-Bui-MC1 · Singapore Management University · ISSS608 · 2026</p>
+
+</body>
+</html>
