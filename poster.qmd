@@ -18,4 +18,4 @@ Our poster condenses the entire investigation — methodology, key evidence, and
 </a>
 :::
 
-<p style="text-align:center;color:#64748b;font-size:.9rem;">Click the poster to open the interactive full-screen version.</p>
+<p style="text-align:center;color:#64748b;font-size:.9rem;">Click the poster to open the full-screen version.</p>
