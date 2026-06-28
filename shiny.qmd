@@ -22,7 +22,7 @@ The app is deployed on **shinyapps.io**. If the frame below is blank, the instan
 
 ## What's inside
 
-The dashboard is organised into four tabs, mirroring the project's analytical objectives:
+The dashboard is organised into five tabs, mirroring the project's analytical objectives:
 
 ::: {.card-grid}
 
@@ -50,11 +50,17 @@ The dashboard is organised into four tabs, mirroring the project's analytical ob
 <p>A competing-hypotheses board that systematically weighs evidence for a deliberate leak versus a system breakdown.</p>
 :::
 
+::: {.feature-card}
+<div class="ic blue">📋</div>
+### Summary &amp; Conclusions
+<p>The investigative verdict, consolidated findings across all three tasks, the competing-hypotheses assessment, and recommended future work.</p>
+:::
+
 :::
 
 ## Built with
 
-The application is written in R and assembled from the project's three task modules (`task1.R`, `task2.R`, `task3.R`) into a single `combined_app.R`. Key packages include:
+The application is written in R and assembled from the project's task modules (`task1.R`, `task2.R`, `task3.R`) and a `summary_tab.R` module into a single `combined_app.R`. Key packages include:
 
 - **Interactive dashboard** — `shiny`, `shinydashboard`, `bslib`, `DT`
 - **Network analysis** — `tidygraph`, `igraph`, `ggraph`, `visNetwork`

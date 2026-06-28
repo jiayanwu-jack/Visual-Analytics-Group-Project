@@ -25,14 +25,14 @@
     "href": "shiny.html#whats-inside",
     "title": "Interactive Shiny Application",
     "section": "What’s inside",
-    "text": "What’s inside\nThe dashboard is organised into four tabs, mirroring the project’s analytical objectives:\n\n\n\n🗂️\n\n\nOverview\n\nOrientation to the case, the dataset, and the two competing hypotheses that frame the investigation.\n\n\n\n\n\n⏱️\n\n\nTimeline & Leak\n\nThe minute-by-minute breach window (4:00–6:00 PM, 5 June), highlighting the social-media leak and the embargo lift.\n\n\n\n\n\n🕸️\n\n\nAgent & Communication Flow\n\nThe communication network between the seven AI agents, with centrality metrics to surface key coordinators and bottlenecks.\n\n\n\n\n\n⚖️\n\n\nEvidence & Judgment\n\nA competing-hypotheses board that systematically weighs evidence for a deliberate leak versus a system breakdown."
+    "text": "What’s inside\nThe dashboard is organised into five tabs, mirroring the project’s analytical objectives:\n\n\n\n🗂️\n\n\nOverview\n\nOrientation to the case, the dataset, and the two competing hypotheses that frame the investigation.\n\n\n\n\n\n⏱️\n\n\nTimeline & Leak\n\nThe minute-by-minute breach window (4:00–6:00 PM, 5 June), highlighting the social-media leak and the embargo lift.\n\n\n\n\n\n🕸️\n\n\nAgent & Communication Flow\n\nThe communication network between the seven AI agents, with centrality metrics to surface key coordinators and bottlenecks.\n\n\n\n\n\n⚖️\n\n\nEvidence & Judgment\n\nA competing-hypotheses board that systematically weighs evidence for a deliberate leak versus a system breakdown.\n\n\n\n\n\n📋\n\n\nSummary & Conclusions\n\nThe investigative verdict, consolidated findings across all three tasks, the competing-hypotheses assessment, and recommended future work."
   },
   {
     "objectID": "shiny.html#built-with",
     "href": "shiny.html#built-with",
     "title": "Interactive Shiny Application",
     "section": "Built with",
-    "text": "Built with\nThe application is written in R and assembled from the project’s three task modules (task1.R, task2.R, task3.R) into a single combined_app.R. Key packages include:\n\nInteractive dashboard — shiny, shinydashboard, bslib, DT\nNetwork analysis — tidygraph, igraph, ggraph, visNetwork\nText analysis — tidytext, quanteda, wordcloud\nVisualisation — ggplot2, plotly, lubridate, tidyverse"
+    "text": "Built with\nThe application is written in R and assembled from the project’s task modules (task1.R, task2.R, task3.R) and a summary_tab.R module into a single combined_app.R. Key packages include:\n\nInteractive dashboard — shiny, shinydashboard, bslib, DT\nNetwork analysis — tidygraph, igraph, ggraph, visNetwork\nText analysis — tidytext, quanteda, wordcloud\nVisualisation — ggplot2, plotly, lubridate, tidyverse"
   },
   {
     "objectID": "shiny.html#run-it-locally",

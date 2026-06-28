@@ -404,7 +404,7 @@ The six analytical outputs are delivered through a `shiny` +
 `shinydashboard` application with six linked tabs:
 
 | Tab | Content | Primary interactivity |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | Causal Chain | 28-node graph + 45-item evidence timeline | Click node to highlight subgraph; hover for quotes |
 | Communication Networks | Pre-crisis and crisis-day plotly networks | Hover edges for message count; click to filter |
 | Channel Behaviour | Channel usage + sensitivity timeline | Period selector; scroll to zoom |
@@ -538,7 +538,7 @@ p +
 ```
 
 | Week | Milestone | Deliverables | Tasks |
-|------------------|------------------|------------------|------------------|
+|----|----|----|----|
 | **Week 1** | Data Preparation & EDA | \- Data cleaning script<br>- Initial exploratory analysis<br>- Data structure documentation | \- Extract communications from JSON<br>- Build interaction network<br>- Calculate basic statistics<br>- Identify breach window |
 | **Week 2** | Network Analysis | \- Network graphs by period<br>- Centrality metrics<br>- Baseline comparison | \- Create period networks<br>- Calculate centrality measures<br>- Visualize network evolution<br>- Identify key actors |
 | **Week 3** | Text & Timeline Analysis | \- TF-IDF results<br>- Event sequence visualization<br>- Action keyword analysis | \- Text preprocessing<br>- TF-IDF by period/agent<br>- Timeline reconstruction<br>- Internal states analysis |
