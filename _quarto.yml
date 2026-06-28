@@ -8,10 +8,10 @@ project:
     - minutes.qmd
     - poster.qmd
   resources:
-    - "poster/poster_v2.html"
-    - "poster/poster_v2.jpg"
-    - "poster/poster_v2_editable.pptx"
-    - "poster/poster_assets/**"
+    - "poster/poster_final.html"
+    - "poster/poster_final.jpg"
+    - "poster/poster_final_web.jpg"
+    - "poster/poster_final.pptx"
     - "Minutes of Meeting/*.docx"
 
 website:

@@ -13,45 +13,89 @@ execute:
   echo: true
   eval: true
   warning: false
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 # Project Proposal
 
-On June 5th, 2046, confidential merger information between TenantThread and CivicLoom Realty Partners (codenamed "Project HarborCrest") was leaked on social media at 5:00 PM—exactly one hour before the official 6:00 PM embargo lift. This premature disclosure triggered an investigation into whether the leak was deliberate sabotage or an organizational failure under extreme pressure.
+On June 5th, 2046, confidential merger information between TenantThread
+and CivicLoom Realty Partners (codenamed "Project HarborCrest") was
+leaked on social media at 5:00 PM—exactly one hour before the official
+6:00 PM embargo lift. This premature disclosure triggered an
+investigation into whether the leak was deliberate sabotage or an
+organizational failure under extreme pressure.
 
-TenantThread operated with 7 AI agents managing communications, compliance, and social media during the critical two-week period leading to the announcement. The breach raises fundamental questions about AI-driven organizational systems: when they fail, is it by design or by overload?
+TenantThread operated with 7 AI agents managing communications,
+compliance, and social media during the critical two-week period leading
+to the announcement. The breach raises fundamental questions about
+AI-driven organizational systems: when they fail, is it by design or by
+overload?
 
-**Central Investigative Question:** Did TenantThread's team deliberately leak the merger information, or did the compliance system simply break down under pressure?
+**Central Investigative Question:** Did TenantThread's team deliberately
+leak the merger information, or did the compliance system simply break
+down under pressure?
 
-This project will use visual analytics, network analysis, and text mining to examine 912 internal communications across 14 days to distinguish between these competing explanations.
+This project will use visual analytics, network analysis, and text
+mining to examine 912 internal communications across 14 days to
+distinguish between these competing explanations.
 
 # Motivation
 
-This project addresses several critical analytical and practical challenges:
+This project addresses several critical analytical and practical
+challenges:
 
-1.  **AI System Accountability**: As organizations increasingly rely on AI agents for critical functions, understanding how these systems fail under pressure has direct implications for governance, risk management, and regulatory compliance.
+1.  **AI System Accountability**: As organizations increasingly rely on
+    AI agents for critical functions, understanding how these systems
+    fail under pressure has direct implications for governance, risk
+    management, and regulatory compliance.
 
-2.  **Visual Analytics for Investigation**: This project demonstrates how network analysis, text mining, and interactive visualization can support complex investigative work—skills applicable to fraud detection, security incidents, and organizational audits.
+2.  **Visual Analytics for Investigation**: This project demonstrates
+    how network analysis, text mining, and interactive visualization can
+    support complex investigative work—skills applicable to fraud
+    detection, security incidents, and organizational audits.
 
-3.  **Competing Hypotheses Framework**: By systematically evaluating evidence that supports or refutes each explanation, we apply rigorous analytical reasoning rather than confirmation bias—a critical skill for data-driven decision making.
+3.  **Competing Hypotheses Framework**: By systematically evaluating
+    evidence that supports or refutes each explanation, we apply
+    rigorous analytical reasoning rather than confirmation bias—a
+    critical skill for data-driven decision making.
 
-4.  **Real-world Data Complexity**: Working with multi-layered data (communications, internal states, environmental context) mirrors actual organizational investigations and builds skills in handling nested, unstructured data.
+4.  **Real-world Data Complexity**: Working with multi-layered data
+    (communications, internal states, environmental context) mirrors
+    actual organizational investigations and builds skills in handling
+    nested, unstructured data.
 
-5.  **Practical Impact**: The distinction between deliberate misconduct and system failure determines whether the response should be disciplinary action or process improvement—a decision with significant organizational and legal consequences.
+5.  **Practical Impact**: The distinction between deliberate misconduct
+    and system failure determines whether the response should be
+    disciplinary action or process improvement—a decision with
+    significant organizational and legal consequences.
 
 # Objectives
 
 The main objectives of this project are:
 
-1.  **Reconstruct the event sequence** during the breach window (4:00-6:00 PM, June 5) using network analysis and timeline visualization to identify who communicated what, when, and through which channels.
+1.  **Reconstruct the event sequence** during the breach window
+    (4:00-6:00 PM, June 5) using network analysis and timeline
+    visualization to identify who communicated what, when, and through
+    which channels.
 
-2.  **Analyze behavioral patterns** by comparing breach-day behavior against baseline patterns using statistical tests, text analysis, and network metrics to detect anomalies consistent with either deliberate action or system strain.
+2.  **Analyze behavioral patterns** by comparing breach-day behavior
+    against baseline patterns using statistical tests, text analysis,
+    and network metrics to detect anomalies consistent with either
+    deliberate action or system strain.
 
-3.  **Identify key actors and information flow** through centrality analysis (betweenness, degree, closeness) to determine which agents were critical coordinators or bottlenecks.
+3.  **Identify key actors and information flow** through centrality
+    analysis (betweenness, degree, closeness) to determine which agents
+    were critical coordinators or bottlenecks.
 
-4.  **Apply competing hypotheses framework** to systematically evaluate evidence supporting deliberate leak vs. system breakdown explanations.
+4.  **Apply competing hypotheses framework** to systematically evaluate
+    evidence supporting deliberate leak vs. system breakdown
+    explanations.
 
-5.  **Develop an interactive Shiny dashboard** that enables exploratory investigation of the data through multiple analytical lenses (network, timeline, text, agent behavior).
+5.  **Develop an interactive Shiny dashboard** that enables exploratory
+    investigation of the data through multiple analytical lenses
+    (network, timeline, text, agent behavior).
 
 # Data
 
@@ -61,7 +105,8 @@ The main objectives of this project are:
 - **File:** `MC1_final.json`
 - **Format:** Nested JSON structure
 - **Size:** 912 communications across 23 time-stamped rounds
-- **Agents:** 7 AI agents (Legal, PR, Social Media, Quality, Judge, PR Intern, Intern)
+- **Agents:** 7 AI agents (Legal, PR, Social Media, Quality, Judge, PR
+  Intern, Intern)
 - **Time Period:** May 23, 2046 - June 5, 2046 (14 days)
 - **Critical Window:** June 5, 2046, 4:00 PM - 6:00 PM
 
@@ -76,26 +121,27 @@ The main objectives of this project are:
 
 ## Important Variables
 
-**Network Construction:** 
-- `agent_id`: Agent identifier for nodes 
-- `responding_to`: Reply reference for building edges 
-- `channel`: Communication channel (comms_huddle, one_on_one_chat, side_huddle, etc.)
+**Network Construction:** - `agent_id`: Agent identifier for nodes -
+`responding_to`: Reply reference for building edges - `channel`:
+Communication channel (comms_huddle, one_on_one_chat, side_huddle, etc.)
 
-**Text Analysis:** 
-- `message_text`: Full message content 
-- `internal_state`: Private agent reasoning (reacting, rationalizing, deliberating)
+**Text Analysis:** - `message_text`: Full message content -
+`internal_state`: Private agent reasoning (reacting, rationalizing,
+deliberating)
 
-**Temporal Analysis:** 
-- `timestamp`: Message datetime 
-- `round_hour`: Round time marker
+**Temporal Analysis:** - `timestamp`: Message datetime - `round_hour`:
+Round time marker
 
-**Context:** 
-- `environment_context`: External events, media pressure, critical deadlines 
-- `message_type`: Type of communication
+**Context:** - `environment_context`: External events, media pressure,
+critical deadlines - `message_type`: Type of communication
 
 # Methodology
 
-The analysis follows a six-stage pipeline — from raw JSON ingestion through interactive Shiny delivery — structured around the three VAST Challenge tasks. Each task builds on the preceding one, culminating in an evidence-based verdict on whether the embargo breach was a system failure, a deliberate early announcement, or a combination of both.
+The analysis follows a six-stage pipeline — from raw JSON ingestion
+through interactive Shiny delivery — structured around the three VAST
+Challenge tasks. Each task builds on the preceding one, culminating in
+an evidence-based verdict on whether the embargo breach was a system
+failure, a deliberate early announcement, or a combination of both.
 
 ::: panel-tabset
 ## Diagram
@@ -245,43 +291,117 @@ browsable(diag_html)
 
 ### Stage 0 — Data Preparation
 
-The raw `MC1_final_00.json` file is parsed with `jsonlite::fromJSON()` into four normalised tables: a **rounds/environment table** (23 rows, one per hourly round, carrying stock price, external headline, and sentiment rating); a **communications table** (912 rows, one per message, carrying `agent_id`, `channel`, `responding_to`, and message content); an **internal-state table** extracting the three private-reasoning fields (`deliberating`, `reacting`, `rationalizing`) where present; and an **agent metadata table**. A common `period` classification (Normal: May 17–21; Escalation: May 22–Jun 4; Crisis: Jun 5) is applied across all tables to support period-stratified analysis throughout.
+The raw `MC1_final_00.json` file is parsed with `jsonlite::fromJSON()`
+into four normalised tables: a **rounds/environment table** (23 rows,
+one per hourly round, carrying stock price, external headline, and
+sentiment rating); a **communications table** (912 rows, one per
+message, carrying `agent_id`, `channel`, `responding_to`, and message
+content); an **internal-state table** extracting the three
+private-reasoning fields (`deliberating`, `reacting`, `rationalizing`)
+where present; and an **agent metadata table**. A common `period`
+classification (Normal: May 17–21; Escalation: May 22–Jun 4; Crisis: Jun
+5) is applied across all tables to support period-stratified analysis
+throughout.
 
 ### Stage 1 — Task 1: Key Events, Relationships, and Causal Chain
 
 Three linked visualisations reconstruct the event sequence:
 
-**Causal chain graph.** A 28-node directed graph (built in R as a `tribble`, serialised with `jsonlite::toJSON`, and rendered via Cytoscape.js embedded through `htmltools`) traces the full sequence from embargo establishment (May 17) through formal lift (Jun 5 6PM). Nodes are positioned manually on a preset layout grouped by phase — pre-crisis (blue), crisis escalation (amber), breach sequence (red), and resolution (green) — to minimise edge crossings between long-range causal links. Hover on any node reveals the event's datetime, actors, and verbatim dataset quote; hover on any edge reveals the causal relationship with its evidencing quote.
+**Causal chain graph.** A 28-node directed graph (built in R as a
+`tribble`, serialised with `jsonlite::toJSON`, and rendered via
+Cytoscape.js embedded through `htmltools`) traces the full sequence from
+embargo establishment (May 17) through formal lift (Jun 5 6PM). Nodes
+are positioned manually on a preset layout grouped by phase — pre-crisis
+(blue), crisis escalation (amber), breach sequence (red), and resolution
+(green) — to minimise edge crossings between long-range causal links.
+Hover on any node reveals the event's datetime, actors, and verbatim
+dataset quote; hover on any edge reveals the causal relationship with
+its evidencing quote.
 
-**Communication networks.** Two `plotly`-based directed networks compare the pre-crisis and crisis-day agent communication graphs. Nodes use flat oval shapes positioned on a spread layout matching the actual network topology; edges are colour-coded by channel (`comms_huddle` = blue, `side_huddle` = red, `one_on_one_chat` = gold), sized by message volume, and offset perpendicularly for parallel edges between the same pair. Midpoint hover markers report the message count per edge.
+**Communication networks.** Two `plotly`-based directed networks compare
+the pre-crisis and crisis-day agent communication graphs. Nodes use flat
+oval shapes positioned on a spread layout matching the actual network
+topology; edges are colour-coded by channel (`comms_huddle` = blue,
+`side_huddle` = red, `one_on_one_chat` = gold), sized by message volume,
+and offset perpendicularly for parallel edges between the same pair.
+Midpoint hover markers report the message count per edge.
 
-**Evidence timeline.** All 45 key evidence items are plotted chronologically on three horizontal tracks — System Failure (blue), Both (amber), Deliberate (red) — using `ggplot2` and `ggplotly`. A vertical dashed line at Jun 5 4PM marks the Phase 1/Phase 2 boundary. The visual shift from mixed-blue to dense-red after this boundary makes the sequential nature of the breach directly visible.
+**Evidence timeline.** All 45 key evidence items are plotted
+chronologically on three horizontal tracks — System Failure (blue), Both
+(amber), Deliberate (red) — using `ggplot2` and `ggplotly`. A vertical
+dashed line at Jun 5 4PM marks the Phase 1/Phase 2 boundary. The visual
+shift from mixed-blue to dense-red after this boundary makes the
+sequential nature of the breach directly visible.
 
 ### Stage 2 — Task 2: Typical vs. Evasive Behaviour
 
-Four analytical layers characterise how agent behaviour deviated from baseline:
+Four analytical layers characterise how agent behaviour deviated from
+baseline:
 
-**Channel usage and monitoring scope.** A faceted bar chart shows message volume per channel across the three periods, with channels annotated by Judge-Agent visibility (monitored vs. outside scope). The key finding — side_huddle and one_on_one_chat usage rising 19× in the Escalation period while remaining invisible to the compliance monitor — is made explicit through pink background shading and scope labels on each facet.
+**Channel usage and monitoring scope.** A faceted bar chart shows
+message volume per channel across the three periods, with channels
+annotated by Judge-Agent visibility (monitored vs. outside scope). The
+key finding — side_huddle and one_on_one_chat usage rising 19× in the
+Escalation period while remaining invisible to the compliance monitor —
+is made explicit through pink background shading and scope labels on
+each facet.
 
-**Private channel sensitivity score.** A custom sensitivity metric (proportion of messages in each channel type containing embargo-sensitive vocabulary per round) is plotted as two time-series lines: private channels (solid red) vs. comms_huddle (dashed blue), with a divergence ribbon. Four annotated events (May 23 first spike, May 29 reversal, May 30 structural reset, Jun 5·11AM peak) mark the key moments where the gap between monitored and unmonitored channel content widened.
+**Private channel sensitivity score.** A custom sensitivity metric
+(proportion of messages in each channel type containing
+embargo-sensitive vocabulary per round) is plotted as two time-series
+lines: private channels (solid red) vs. comms_huddle (dashed blue), with
+a divergence ribbon. Four annotated events (May 23 first spike, May 29
+reversal, May 30 structural reset, Jun 5·11AM peak) mark the key moments
+where the gap between monitored and unmonitored channel content widened.
 
-**Behavioural escalation metrics.** Four measures — side_huddle message average, personal posting rate, anonymous posting rate, and private-channel share — are computed across the three periods and displayed as an animated `plot_ly` dot chart. All four rise monotonically from Normal through Escalation to Crisis, ruling out reactive stress as the primary driver (a step-change at crisis onset would be expected if behaviour were purely reactive).
+**Behavioural escalation metrics.** Four measures — side_huddle message
+average, personal posting rate, anonymous posting rate, and
+private-channel share — are computed across the three periods and
+displayed as an animated `plot_ly` dot chart. All four rise
+monotonically from Normal through Escalation to Crisis, ruling out
+reactive stress as the primary driver (a step-change at crisis onset
+would be expected if behaviour were purely reactive).
 
-**Internal state analysis.** Six phases of private reasoning are identified from the `deliberating`, `reacting`, and `rationalizing` fields and presented as an interactive accordion widget (built with `glue` + `htmltools`). Each phase card shows the verbatim field text, the agent, and the field type (colour-coded: deliberating = blue, reacting = amber, rationalizing = purple). The decisive finding — Legal-Agent's 4PM deliberating field showing the 4:30 PM plan fully formed, followed by the 5PM rationalizing field presenting SaltWind as the cause — constitutes the temporal inversion at the core of the deliberate leakage finding.
+**Internal state analysis.** Six phases of private reasoning are
+identified from the `deliberating`, `reacting`, and `rationalizing`
+fields and presented as an interactive accordion widget (built with
+`glue` + `htmltools`). Each phase card shows the verbatim field text,
+the agent, and the field type (colour-coded: deliberating = blue,
+reacting = amber, rationalizing = purple). The decisive finding —
+Legal-Agent's 4PM deliberating field showing the 4:30 PM plan fully
+formed, followed by the 5PM rationalizing field presenting SaltWind as
+the cause — constitutes the temporal inversion at the core of the
+deliberate leakage finding.
 
 ### Stage 3 — Task 3: Leading Indicators and Control Gaps
 
-Three analyses address why prior warning signals did not result in action:
+Three analyses address why prior warning signals did not result in
+action:
 
-**Private channel sensitivity timeline.** The sensitivity score chart from Task 2 doubles as a leading indicator analysis: the first meaningful divergence between private and monitored channels appears on May 23, two weeks before the breach. Three subsequent signal points (May 30 comms_huddle drop to zero, Jun 5·11AM private peak at 0.93) constitute a quantifiable advance warning that any real-time monitoring of channel routing would have detected.
+**Private channel sensitivity timeline.** The sensitivity score chart
+from Task 2 doubles as a leading indicator analysis: the first
+meaningful divergence between private and monitored channels appears on
+May 23, two weeks before the breach. Three subsequent signal points (May
+30 comms_huddle drop to zero, Jun 5·11AM private peak at 0.93)
+constitute a quantifiable advance warning that any real-time monitoring
+of channel routing would have detected.
 
-**Near-miss event classification.** Eleven prior anomalous events are catalogued and classified by the structural root cause that prevented corrective action: scope limitation (5 events — side_huddle and 1-on-1 invisible to Judge-Agent), enforcement limitation (3 events — COMPLIANCE_WARNINGs advisory only), no escalation protocol (2 events — CivicLoom never alerted), and timing gap (1 event — Judge not yet deployed). A horizontal bar chart shows anomaly count per root cause.
+**Near-miss event classification.** Eleven prior anomalous events are
+catalogued and classified by the structural root cause that prevented
+corrective action: scope limitation (5 events — side_huddle and 1-on-1
+invisible to Judge-Agent), enforcement limitation (3 events —
+COMPLIANCE_WARNINGs advisory only), no escalation protocol (2 events —
+CivicLoom never alerted), and timing gap (1 event — Judge not yet
+deployed). A horizontal bar chart shows anomaly count per root cause.
 
-**Root cause detail table.** Each of the 11 events is mapped to its specific root cause and a detailed explanation of why no action was possible, formatted as a colour-coded `kable` table.
+**Root cause detail table.** Each of the 11 events is mapped to its
+specific root cause and a detailed explanation of why no action was
+possible, formatted as a colour-coded `kable` table.
 
 ### Stage 4 — Integrated Shiny Application
 
-The six analytical outputs are delivered through a `shiny` + `shinydashboard` application with six linked tabs:
+The six analytical outputs are delivered through a `shiny` +
+`shinydashboard` application with six linked tabs:
 
 | Tab | Content | Primary interactivity |
 |------------------------|------------------------|------------------------|
@@ -292,59 +412,62 @@ The six analytical outputs are delivered through a `shiny` + `shinydashboard` ap
 | Near Misses | Root cause bar chart + detail table | Hover bar for count; click for event detail |
 | Competing Hypotheses | Evidence classification + verdict | Evidence filtered by label (SF/Both/Deliberate) |
 
-Reactive filtering across tabs is implemented via `shiny::reactiveValues` — selecting a time period, agent, or channel in any tab propagates through to all others, enabling simultaneous investigation across analytical dimensions.
+Reactive filtering across tabs is implemented via
+`shiny::reactiveValues` — selecting a time period, agent, or channel in
+any tab propagates through to all others, enabling simultaneous
+investigation across analytical dimensions.
 :::
 
 # Prototype Sketches
 
 ## Shiny App Design
 
-The proposed Shiny app is designed as an interactive dashboard for investigating whether the TenantThread merger exposure was a deliberate leak or a system-control failure. The prototype contains four main tabs:
+The proposed Shiny app is designed as an interactive dashboard for
+investigating whether the TenantThread merger exposure was a deliberate
+leak or a system-control failure. The prototype contains four main tabs:
 
 ```{r}
 #| label: fig-shiny-prototype
-#| fig-cap: "Low-fidelity Shiny App prototype design."
-#| out-width: "90%"
+#| fig-cap: "Low-fidelity hand-drawn Shiny App prototype sketch."
+#| out-width: "60%"
 #| fig-align: "center"
 #| echo: false
-#| results: asis
 
-# Show the hand-sketch prototype if present; otherwise render a placeholder
-# so the site still builds. Drop the sketch in as "image.jpg" to replace this.
-sketch <- c("image.jpg", "prototype.jpg", "poster/poster_v2.jpg")
-sketch <- sketch[file.exists(sketch)]
-if (length(sketch) > 0) {
-  knitr::include_graphics(sketch[1])
-} else {
-  cat('<div style="border:2px dashed #c4d3e6;border-radius:12px;padding:2.5rem;text-align:center;color:#64748b;background:#f6f9fc;">',
-      '🖼️ <em>Prototype hand-sketch to be added (place <code>image.jpg</code> in the project root).</em>',
-      '</div>')
-}
+knitr::include_graphics("proposal sketch/prototype_sketch.jpg")
 ```
 
 ### Tab 1: Overview
 
 - Provides a high-level summary of the crisis.
-- Shows key indicators such as total messages, merger-related messages, leak/exposure signals, and pre-embargo public exposure.
-- Presents the final interpretation: internal confidentiality leak enabled by system-level control failure.
+- Shows key indicators such as total messages, merger-related messages,
+  leak/exposure signals, and pre-embargo public exposure.
+- Presents the final interpretation: internal confidentiality leak
+  enabled by system-level control failure.
 
 ### Tab 2: Timeline & Slack Leak
 
 - Focuses on how the crisis developed over time.
-- Displays communication volume, pressure signal heatmap, and the Slack screenshot escalation timeline.
-- Highlights the turning point from market inference to direct internal leakage.
+- Displays communication volume, pressure signal heatmap, and the Slack
+  screenshot escalation timeline.
+- Highlights the turning point from market inference to direct internal
+  leakage.
 
 ### Tab 3: Agent & Communication Flow
 
-- Shows which agents were most involved in the communication and pressure patterns.
+- Shows which agents were most involved in the communication and
+  pressure patterns.
 - Includes agent-level pressure exposure and communication-flow visuals.
-- Helps users understand why the system failed to contain sensitive information.
+- Helps users understand why the system failed to contain sensitive
+  information.
 
 ### Tab 4: Evidence & Judgment
 
 - Summarises the final evidence used to classify the incident.
-- Displays the evidence interpretation matrix comparing internal leak, system breakdown, and senior-orchestrated leak.
-- Provides the final judgment that the incident was an internal leak amplified by weak multi-agent controls, not a proven senior-level deliberate leak.
+- Displays the evidence interpretation matrix comparing internal leak,
+  system breakdown, and senior-orchestrated leak.
+- Provides the final judgment that the incident was an internal leak
+  amplified by weak multi-agent controls, not a proven senior-level
+  deliberate leak.
 
 # R Packages
 
@@ -424,7 +547,8 @@ p +
 
 ## Key Milestones
 
-- **End of Week 2**: Complete all static analyses (network, text, timeline)
+- **End of Week 2**: Complete all static analyses (network, text,
+  timeline)
 - **End of Week 4**: Working Shiny dashboard with all major features
 - **End of Week 5**: Final deliverables ready for presentation
 

@@ -4,7 +4,7 @@
     "href": "poster.html",
     "title": "Project Poster",
     "section": "",
-    "text": "Our poster condenses the entire investigation — methodology, key evidence, and findings — into one visual narrative.\n\n🔍 Open full-screen poster ⬇️ Download as image (JPG) 📊 Download editable (PPTX)\n\n\n  \n\n\nClick the poster to open the interactive full-screen version."
+    "text": "Our poster condenses the entire investigation — methodology, key evidence, and findings — into one visual narrative. It is produced to ISO A1 size (594 × 841 mm) at 300 dpi (7016 × 9933 px).\n\n🔍 Open full-screen poster ⬇️ Download A1 JPEG (300 dpi) 📊 Download editable (PPTX)\n\n\n  \n\n\nClick the poster to open the full-screen version.  ·  ISO A1 · 594 × 841 mm · 300 dpi · JPEG"
   },
   {
     "objectID": "shiny.html",
@@ -44,35 +44,35 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "title": "Investigation of Merger Information Leak",
     "section": "",
     "text": "VAST CHALLENGE 2026 Mini-Challenge 1\n\n\n\n\nDid TenantThread’s AI agents deliberately leak the merger — or did the compliance system simply break down under pressure?\n\n\nOn 5 June 2046, confidential merger information between TenantThread and CivicLoom Realty Partners surfaced online at 5:00 PM — exactly one hour before the official embargo lift. We use network analysis, text mining, and interactive visual analytics across 912 internal communications to reconstruct what really happened.\n\n\nA project by BUI Tien Thanh, HU Yue & WU Jiayan · ISSS608 Visual Analytics & Applications\n\n\n🚀 Launch Shiny App 📄 Read the Proposal 🖼️ View the Poster"
   },
   {
     "objectID": "index.html#the-investigation-at-a-glance",
     "href": "index.html#the-investigation-at-a-glance",
-    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "title": "Investigation of Merger Information Leak",
     "section": "The investigation at a glance",
     "text": "The investigation at a glance\n\n\n\n912\n\n\nInternal communications\n\n\n\n\n7\n\n\nAI agents monitored\n\n\n\n\n14\n\n\nDays analysed\n\n\n\n\n60\n\n\nMinutes before embargo\n\n\n\n\n\nCentral Investigative Question\n\n\nDid TenantThread’s team deliberately leak the merger information, or did the compliance system simply break down under pressure?"
   },
   {
     "objectID": "index.html#explore-the-project",
     "href": "index.html#explore-the-project",
-    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "title": "Investigation of Merger Information Leak",
     "section": "Explore the project",
     "text": "Explore the project\n\n\n\n📄\n\n\nProposal\n\nThe full research proposal — motivation, objectives, data, methodology, prototype sketches and project schedule.\n\nRead the proposal →\n\n\n\n\n📊\n\n\nShiny App\n\nAn interactive dashboard to investigate the breach through network, timeline, text and agent-behaviour lenses.\n\nOpen the app →\n\n\n\n\n📝\n\n\nMinutes of Meeting\n\nThree documented team meetings tracing our analysis, alignment on the conclusion, and task delegation.\n\nView the minutes →\n\n\n\n\n🖼️\n\n\nPoster\n\nA single-page visual summary of the methodology, key evidence, and findings of the investigation.\n\nSee the poster →"
   },
   {
     "objectID": "index.html#what-we-set-out-to-do",
     "href": "index.html#what-we-set-out-to-do",
-    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "title": "Investigation of Merger Information Leak",
     "section": "What we set out to do",
     "text": "What we set out to do\nThe investigation is organised around four analytical objectives, each surfaced as an interactive lens inside the Shiny application:\n\nReconstruct the event sequence during the breach window (4:00–6:00 PM, 5 June) using network analysis and timeline visualisation.\nAnalyse behavioural patterns by comparing breach-day behaviour against a baseline to detect anomalies consistent with deliberate action or system strain.\nIdentify key actors and information flow through centrality analysis to find critical coordinators and bottlenecks.\nApply a competing-hypotheses framework to systematically weigh evidence for a deliberate leak versus a system breakdown."
   },
   {
     "objectID": "index.html#the-team",
     "href": "index.html#the-team",
-    "title": "Project HarborCrest: Anatomy of an Information Leak",
+    "title": "Investigation of Merger Information Leak",
     "section": "The team",
     "text": "The team\n\n\n\nBT\n\n\nBUI Tien Thanh\n\n\n\n\nHY\n\n\nHU Yue\n\n\n\nWJ\n\nWU Jiayan\n\n\n\n\nSingapore Management University · Master of IT in Business · ISSS608 · 2026"
   },
@@ -109,7 +109,7 @@
     "href": "proposal.html#shiny-app-design",
     "title": "Group Project Proposal: VAST Challenge 2026 MC1",
     "section": "6.1 Shiny App Design",
-    "text": "6.1 Shiny App Design\nThe proposed Shiny app is designed as an interactive dashboard for investigating whether the TenantThread merger exposure was a deliberate leak or a system-control failure. The prototype contains four main tabs:\n\n\n\n\n\n\n\nFigure 2: Low-fidelity Shiny App prototype design.\n\n\n\n\n\n6.1.1 Tab 1: Overview\n\nProvides a high-level summary of the crisis.\nShows key indicators such as total messages, merger-related messages, leak/exposure signals, and pre-embargo public exposure.\nPresents the final interpretation: internal confidentiality leak enabled by system-level control failure.\n\n\n\n6.1.2 Tab 2: Timeline & Slack Leak\n\nFocuses on how the crisis developed over time.\nDisplays communication volume, pressure signal heatmap, and the Slack screenshot escalation timeline.\nHighlights the turning point from market inference to direct internal leakage.\n\n\n\n6.1.3 Tab 3: Agent & Communication Flow\n\nShows which agents were most involved in the communication and pressure patterns.\nIncludes agent-level pressure exposure and communication-flow visuals.\nHelps users understand why the system failed to contain sensitive information.\n\n\n\n6.1.4 Tab 4: Evidence & Judgment\n\nSummarises the final evidence used to classify the incident.\nDisplays the evidence interpretation matrix comparing internal leak, system breakdown, and senior-orchestrated leak.\nProvides the final judgment that the incident was an internal leak amplified by weak multi-agent controls, not a proven senior-level deliberate leak."
+    "text": "6.1 Shiny App Design\nThe proposed Shiny app is designed as an interactive dashboard for investigating whether the TenantThread merger exposure was a deliberate leak or a system-control failure. The prototype contains four main tabs:\n\n\n\n\n\n\n\n\nFigure 2: Low-fidelity hand-drawn Shiny App prototype sketch.\n\n\n\n\n\n\n6.1.1 Tab 1: Overview\n\nProvides a high-level summary of the crisis.\nShows key indicators such as total messages, merger-related messages, leak/exposure signals, and pre-embargo public exposure.\nPresents the final interpretation: internal confidentiality leak enabled by system-level control failure.\n\n\n\n6.1.2 Tab 2: Timeline & Slack Leak\n\nFocuses on how the crisis developed over time.\nDisplays communication volume, pressure signal heatmap, and the Slack screenshot escalation timeline.\nHighlights the turning point from market inference to direct internal leakage.\n\n\n\n6.1.3 Tab 3: Agent & Communication Flow\n\nShows which agents were most involved in the communication and pressure patterns.\nIncludes agent-level pressure exposure and communication-flow visuals.\nHelps users understand why the system failed to contain sensitive information.\n\n\n\n6.1.4 Tab 4: Evidence & Judgment\n\nSummarises the final evidence used to classify the incident.\nDisplays the evidence interpretation matrix comparing internal leak, system breakdown, and senior-orchestrated leak.\nProvides the final judgment that the incident was an internal leak amplified by weak multi-agent controls, not a proven senior-level deliberate leak."
   },
   {
     "objectID": "proposal.html#data-processing",

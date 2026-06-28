@@ -8,105 +8,177 @@ format:
       body-width: 1100px
 ---
 
-::: {.hero}
-<div class="eyebrow"><span class="chip">VAST CHALLENGE 2026</span> Mini-Challenge 1</div>
-
-# Project HarborCrest: Anatomy of an Information Leak
-
-<p class="sub">Did TenantThread's AI agents deliberately leak the merger — or did the compliance system simply break down under pressure?</p>
-
-<p class="lede">On 5 June 2046, confidential merger information between TenantThread and CivicLoom Realty Partners surfaced online at 5:00 PM — exactly one hour before the official embargo lift. We use network analysis, text mining, and interactive visual analytics across 912 internal communications to reconstruct what really happened.</p>
-
-<p class="authors">A project by <strong>BUI Tien Thanh</strong>, <strong>HU Yue</strong> &amp; <strong>WU Jiayan</strong> · ISSS608 Visual Analytics &amp; Applications</p>
-
-<div class="cta">
-  <a class="btn-hero primary" href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank">🚀 Launch Shiny App</a>
-  <a class="btn-hero ghost" href="proposal.html">📄 Read the Proposal</a>
-  <a class="btn-hero ghost" href="poster.html">🖼️ View the Poster</a>
-</div>
+::::: hero
+::: eyebrow
+[VAST CHALLENGE 2026]{.chip} Mini-Challenge 1
 :::
+
+# Investigation of Merger Information Leak
+
+<p class="sub">
+
+Did TenantThread's AI agents deliberately leak the merger — or did the compliance system simply break down under pressure?
+
+</p>
+
+<p class="lede">
+
+On 5 June 2046, confidential merger information between TenantThread and CivicLoom Realty Partners surfaced online at 5:00 PM — exactly one hour before the official embargo lift. We use network analysis, text mining, and interactive visual analytics across 912 internal communications to reconstruct what really happened.
+
+</p>
+
+<p class="authors">
+
+A project by <strong>BUI Tien Thanh</strong>, <strong>HU Yue</strong> & <strong>WU Jiayan</strong> · ISSS608 Visual Analytics & Applications
+
+</p>
+
+::: cta
+<a class="btn-hero primary" href="https://wujiayan.shinyapps.io/VAST_Challenge_2026" target="_blank">🚀 Launch Shiny App</a> <a class="btn-hero ghost" href="proposal.html">📄 Read the Proposal</a> <a class="btn-hero ghost" href="poster.html">🖼️ View the Poster</a>
+:::
+:::::
 
 ## The investigation at a glance
 
-::: {.stat-strip}
-::: {.stat}
-<div class="num">912</div><div class="lbl">Internal communications</div>
-:::
-::: {.stat}
-<div class="num">7</div><div class="lbl">AI agents monitored</div>
-:::
-::: {.stat}
-<div class="num">14</div><div class="lbl">Days analysed</div>
-:::
-::: {.stat}
-<div class="num">60</div><div class="lbl">Minutes before embargo</div>
-:::
+::::::::::::::: stat-strip
+::::: stat
+::: num
+912
 :::
 
-::: {.keyq}
-<div class="label">Central Investigative Question</div>
-<p>Did TenantThread's team deliberately leak the merger information, or did the compliance system simply break down under pressure?</p>
+::: lbl
+Internal communications
 :::
+:::::
+
+::::: stat
+::: num
+7
+:::
+
+::: lbl
+AI agents monitored
+:::
+:::::
+
+::::: stat
+::: num
+14
+:::
+
+::: lbl
+Days analysed
+:::
+:::::
+
+::::: stat
+::: num
+60
+:::
+
+::: lbl
+Minutes before embargo
+:::
+:::::
+:::::::::::::::
+
+:::: keyq
+::: label
+Central Investigative Question
+:::
+
+<p>Did TenantThread's team deliberately leak the merger information, or did the compliance system simply break down under pressure?</p>
+::::
 
 ## Explore the project
 
-::: {.card-grid}
+::::::::::: card-grid
+:::: feature-card
+::: {.ic .blue}
+📄
+:::
 
-::: {.feature-card}
-<div class="ic blue">📄</div>
 ### Proposal
+
 <p>The full research proposal — motivation, objectives, data, methodology, prototype sketches and project schedule.</p>
+
 <a class="more" href="proposal.html">Read the proposal →</a>
+::::
+
+:::: feature-card
+::: {.ic .teal}
+📊
 :::
 
-::: {.feature-card}
-<div class="ic teal">📊</div>
 ### Shiny App
+
 <p>An interactive dashboard to investigate the breach through network, timeline, text and agent-behaviour lenses.</p>
+
 <a class="more" href="shiny.html">Open the app →</a>
+::::
+
+:::: feature-card
+::: {.ic .amber}
+📝
 :::
 
-::: {.feature-card}
-<div class="ic amber">📝</div>
 ### Minutes of Meeting
+
 <p>Three documented team meetings tracing our analysis, alignment on the conclusion, and task delegation.</p>
+
 <a class="more" href="minutes.html">View the minutes →</a>
+::::
+
+:::: feature-card
+::: {.ic .purple}
+🖼️
 :::
 
-::: {.feature-card}
-<div class="ic purple">🖼️</div>
 ### Poster
-<p>A single-page visual summary of the methodology, key evidence, and findings of the investigation.</p>
-<a class="more" href="poster.html">See the poster →</a>
-:::
 
-:::
+<p>A single-page visual summary of the methodology, key evidence, and findings of the investigation.</p>
+
+<a class="more" href="poster.html">See the poster →</a>
+::::
+:::::::::::
 
 ## What we set out to do
 
 The investigation is organised around four analytical objectives, each surfaced as an interactive lens inside the Shiny application:
 
-1. **Reconstruct the event sequence** during the breach window (4:00–6:00 PM, 5 June) using network analysis and timeline visualisation.
-2. **Analyse behavioural patterns** by comparing breach-day behaviour against a baseline to detect anomalies consistent with deliberate action or system strain.
-3. **Identify key actors and information flow** through centrality analysis to find critical coordinators and bottlenecks.
-4. **Apply a competing-hypotheses framework** to systematically weigh evidence for a deliberate leak versus a system breakdown.
+1.  **Reconstruct the event sequence** during the breach window (4:00–6:00 PM, 5 June) using network analysis and timeline visualisation.
+2.  **Analyse behavioural patterns** by comparing breach-day behaviour against a baseline to detect anomalies consistent with deliberate action or system strain.
+3.  **Identify key actors and information flow** through centrality analysis to find critical coordinators and bottlenecks.
+4.  **Apply a competing-hypotheses framework** to systematically weigh evidence for a deliberate leak versus a system breakdown.
 
 ## The team
 
-::: {.team-grid}
-::: {.member}
-<div class="avatar">BT</div>
+:::::::: team-grid
+:::: member
+::: avatar
+BT
+:::
+
 ### BUI Tien Thanh
+::::
+
+:::: member
+::: avatar
+HY
 :::
-::: {.member}
-<div class="avatar">HY</div>
+
 ### HU Yue
-:::
-::: {.member}
+::::
+
+::: member
 <a class="avatar avatar-link" href="https://isss-608-vaa-iota.vercel.app/" target="_blank" title="WU Jiayan — personal site">WJ</a>
 
 ### WU Jiayan
 :::
-:::
+::::::::
 
-<p style="text-align:center;color:#64748b;font-size:.9rem;margin-top:2.4rem;">Singapore Management University · Master of IT in Business · ISSS608 · 2026</p>
+<p style="text-align:center;color:#64748b;font-size:.9rem;margin-top:2.4rem;">
+
+Singapore Management University · Master of IT in Business · ISSS608 · 2026
+
+</p>
