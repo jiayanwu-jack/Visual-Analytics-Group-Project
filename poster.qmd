@@ -14,7 +14,7 @@ Our poster condenses the entire investigation — methodology, key evidence, and
 
 ::: {.poster-wrap}
 <a href="poster/poster_final.html" target="_blank" title="Open the full-screen poster">
-<img src="poster/poster_final_web.jpg" alt="Project HarborCrest poster — VAST Challenge 2026 MC1 (ISO A1)">
+<img src="poster/poster_final_web.jpg" alt="TenantThread MC1 poster — VAST Challenge 2026 MC1 (ISO A1)">
 </a>
 :::
 

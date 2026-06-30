@@ -3,73 +3,72 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Project HarborCrest — Poster (ISO A1)</title>
+<title>TenantThread MC1 — Poster (ISO A1)</title>
 <meta name="description" content="VAST Challenge 2026 MC1 — Investigating the Information Leak at TenantThread. ISO A1 poster (594 × 841 mm, 300 dpi).">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{ --navy:#0d1b2a; --blue:#2563eb; --line:#dbe3ec; }
+  :root{
+    --navy:#0d1b2a; --blue:#2563eb; --line:#dbe3ec;
+    --sans:"DM Sans","Segoe UI",system-ui,Arial,sans-serif;
+    --mono:"DM Mono","Consolas",monospace;
+  }
   *{ margin:0; padding:0; box-sizing:border-box; }
-  body{
-    font-family:"DM Sans","Segoe UI",system-ui,Arial,sans-serif;
-    background:#9aa6b4;
-    -webkit-font-smoothing:antialiased;
-    min-height:100vh;
-  }
-  /* Toolbar */
-  .toolbar{
+  body{ font-family:var(--sans); background:#9aa6b4; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; min-height:100vh; }
+
+  .phead{
     position:sticky; top:0; z-index:10;
-    display:flex; align-items:center; gap:.9rem; flex-wrap:wrap;
-    padding:.7rem 1.1rem;
+    display:flex; align-items:flex-end; justify-content:space-between; gap:1.4rem 2rem; flex-wrap:wrap;
+    padding:1.4rem clamp(1.1rem,3vw,2.6rem) 1.2rem;
     background:linear-gradient(110deg,#0b1622 0%,#13263c 55%,#1c3a5e 100%);
-    color:#eaf1f8; border-bottom:3px solid var(--blue);
-    box-shadow:0 2px 14px rgba(13,27,42,.25);
+    color:#eaf1f8; border-bottom:4px solid var(--blue); box-shadow:0 4px 20px rgba(13,27,42,.3);
   }
-  .toolbar .title{ font-weight:800; letter-spacing:.01em; }
-  .toolbar .spec{ font-size:.8rem; color:#a9c8f4; font-weight:600; }
-  .toolbar .grow{ flex:1; }
-  .btn{
-    display:inline-flex; align-items:center; gap:.4rem;
-    padding:.5rem 1rem; border-radius:9px; font-weight:700; font-size:.86rem;
-    text-decoration:none; transition:transform .15s ease;
-  }
-  .btn.primary{ background:#2f6fed; color:#fff; }
-  .btn.ghost{ background:rgba(255,255,255,.1); color:#eaf1f8; border:1px solid rgba(255,255,255,.28); }
-  .btn:hover{ transform:translateY(-1px); }
-  /* Stage */
-  .stage{ padding:2.2rem clamp(.6rem,3vw,3rem); display:flex; justify-content:center; }
-  .sheet{
-    background:#fff; border-radius:6px; overflow:hidden;
-    box-shadow:0 30px 70px -30px rgba(13,27,42,.7);
-    width:min(100%, 1200px);
-  }
+  .kicker{ font-size:clamp(.66rem,1.1vw,.82rem); font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:#7ea8e6; margin-bottom:.5rem; }
+  .phead h1{ font-size:clamp(1.8rem,4.4vw,3rem); font-weight:800; letter-spacing:-.022em; line-height:1.02; color:#fff; }
+  .phead .sub{ font-size:clamp(.95rem,1.8vw,1.22rem); font-weight:500; color:#c2d4ea; margin-top:.5rem; max-width:46ch; line-height:1.4; }
+  .actions{ display:flex; gap:.7rem; flex-wrap:wrap; align-items:center; }
+  .btn{ display:inline-flex; align-items:center; gap:.45rem; padding:.62rem 1.15rem; border-radius:10px; font-weight:700; font-size:.9rem; text-decoration:none; transition:transform .15s ease; }
+  .btn.primary{ background:#2f6fed; color:#fff; box-shadow:0 10px 22px -12px rgba(47,111,237,.9); }
+  .btn.ghost{ background:rgba(255,255,255,.08); color:#eaf1f8; border:1px solid rgba(255,255,255,.3); }
+  .btn:hover{ transform:translateY(-2px); }
+
+  .specbar{ font-family:var(--mono); font-size:clamp(.72rem,1.3vw,.86rem); letter-spacing:.04em; color:#33455c; background:#dfe6ee; border-bottom:1px solid #cbd6e2; text-align:center; padding:.5rem 1rem; }
+
+  .stage{ padding:2.4rem clamp(.6rem,3vw,3rem); display:flex; justify-content:center; }
+  .sheet{ background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 30px 70px -30px rgba(13,27,42,.7); width:min(100%, 1240px); }
   .sheet img{ display:block; width:100%; height:auto; }
-  footer{ text-align:center; color:#41566c; font-size:.82rem; padding:0 1rem 2.2rem; }
+
+  footer{ text-align:center; color:#33455c; padding:.4rem 1rem 2.6rem; font-size:clamp(.8rem,1.4vw,.92rem); line-height:1.6; }
+  footer .names{ font-weight:600; color:#1f3247; }
 </style>
 </head>
 <body>
-  <div class="toolbar">
-    <span class="title">Project HarborCrest</span>
-    <span class="spec">ISO A1 · 594 × 841 mm · 300 dpi · 7016 × 9933 px</span>
-    <span class="grow"></span>
-    <a class="btn primary" href="poster_final.jpg" download>⬇️ Download full-resolution JPEG</a>
-    <a class="btn ghost" href="poster_final.jpg" target="_blank">🔍 Open at 100%</a>
-  </div>
+  <header class="phead">
+    <div class="brand">
+      <div class="kicker">VAST Challenge 2026 · Mini-Challenge 1</div>
+      <h1>TenantThread MC1</h1>
+      <p class="sub">Investigating the Information Leak at TenantThread</p>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="poster_final.jpg" download>⬇️ Download full-resolution JPEG</a>
+      <a class="btn ghost" href="poster_final.jpg" target="_blank">🔍 Open at 100%</a>
+    </div>
+  </header>
+
+  <div class="specbar">ISO A1 &nbsp;·&nbsp; 594 × 841 mm &nbsp;·&nbsp; 300 dpi &nbsp;·&nbsp; 7016 × 9933 px &nbsp;·&nbsp; JPEG</div>
 
   <div class="stage">
     <div class="sheet">
       <a href="poster_final.jpg" target="_blank" title="Open full-resolution poster">
-        <img src="poster_final_web.jpg"
-             alt="Project HarborCrest poster — VAST Challenge 2026 MC1"
-             loading="eager">
+        <img src="poster_final_web.jpg" alt="TenantThread MC1 poster — VAST Challenge 2026 MC1" loading="eager">
       </a>
     </div>
   </div>
 
   <footer>
-    VAST Challenge 2026 · Mini-Challenge 1 &nbsp;·&nbsp; BUI Tien Thanh · HU Yue · WU Jiayan
-    &nbsp;·&nbsp; Singapore Management University · ISSS608
+    <span class="names">BUI Tien Thanh · HU Yue · WU Jiayan</span><br>
+    Singapore Management University · ISSS608 Visual Analytics &amp; Applications
   </footer>
 </body>
 </html>

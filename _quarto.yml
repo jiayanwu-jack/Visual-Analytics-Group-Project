@@ -12,6 +12,7 @@ project:
     - "poster/poster_final.jpg"
     - "poster/poster_final_web.jpg"
     - "poster/poster_final.pptx"
+    - "poster/poster_assets/**"
     - "Minutes of Meeting/*.docx"
 
 website:
