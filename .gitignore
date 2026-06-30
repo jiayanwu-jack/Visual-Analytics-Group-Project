@@ -1,6 +1,10 @@
 /.quarto/
 **/*.quarto_ipynb
 .Rproj.user
+.Rhistory
+**/.Rhistory
+.RData
+.Ruserdata
 
 .claude
 **/.DS_Store
