@@ -177,8 +177,26 @@ HY
 :::
 ::::::::
 
-<p style="text-align:center;color:#64748b;font-size:.9rem;margin-top:2.4rem;">
+## Project mentor
 
-Singapore Management University · Master of IT in Business · ISSS608 · 2026
+:::: {.member style="max-width:380px;margin:1.2rem auto 0;"}
+<a class="avatar avatar-link" href="https://faculty.smu.edu.sg/profile/kam-tin-seong-486" target="_blank" title="Professor KAM Tin Seong — SMU faculty profile" style="background:linear-gradient(135deg,#0d9488,#1c3a5e);">KTS</a>
+
+### Professor KAM Tin Seong
+
+::: role
+<a href="https://faculty.smu.edu.sg/profile/kam-tin-seong-486" target="_blank">Project Mentor · SMU faculty profile ↗</a>
+:::
+::::
+
+<p style="text-align:center;color:#475569;font-size:.95rem;font-weight:600;margin-top:.7rem;">
+
+School of Computing and Information Systems, Singapore Management University
+
+</p>
+
+<p style="text-align:center;color:#64748b;font-size:.9rem;margin-top:1.6rem;">
+
+Master of IT in Business · ISSS608 · 2026
 
 </p>
